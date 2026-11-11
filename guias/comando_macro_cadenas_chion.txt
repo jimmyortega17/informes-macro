@@ -1,0 +1,168 @@
+Información y Cifras: Presentar la evolución de variables relevantes con cifras de fuentes oficiales o reconocidas, organizándolas en tablas o gráficos para facilitar su interpretación. Explicar y entender las relaciones entre las cifras y su contexto.
+
+Entendimiento del Marco Teórico Macroeconómico: Explicar y aplicar los conceptos, teorías, ecuaciones y herramientas macroeconómicas relevantes. Describir la situación actual y sus posibles perspectivas dentro de este marco.
+de cada variable macro 
+hacer cadena de razonamiento de a dos VARIABLES MACRO por ejemplo inflacion y crecimient y como influye en la empresa con cifras
+parrafos de corrido con cifras con tablas con ecuaciones con cifras 
+Ecuación del PBI: 
+PBI=C+I+G+(X−M)
+Ecuación de la Demanda de Dinero (Teoría Cuantitativa del Dinero): 
+M×V=P×Y
+Ecuación de Fisher sobre las Tasas de Interés: 
+i=r+π Donde:
+•	i = Tasa de interés nominal = 
+•	π = Tasa de inflación esperada =
+•	Para encontrar r: r=i−π =
+Ecuación de la Balanza de Pagos: 
+BP=CA+KA+ER
+curva de philips 
+
+elasticidad de demanda
+
+
+**************************************************************************
+Información y Cifras: Presentar la evolución de variables relevantes con cifras de fuentes oficiales o reconocidas, organizándolas en tablas o gráficos para facilitar su interpretación. Explicar y entender las relaciones entre las cifras y su contexto.
+
+Entendimiento del Marco Teórico Macroeconómico: Explicar y aplicar los conceptos, teorías, ecuaciones y herramientas macroeconómicas relevantes. Describir la situación actual y sus posibles perspectivas dentro de este marco.
+
+de cada variable macro 
+hacer cadena de razonamiento de a dos VARIABLES MACRO
+Cadenas de inferencias lógicas con sustento macroeconómico
+***********************************************************************************
+en parrafos de corrido
+con cifras
+
+por cada variable macroeconomica
+
+CADENAS DE RAZONAMIENTO DE A DOS VARIABLES MACROECONOMICAS
+analizando para la empresa
+
+Sector	2023	2024	2025
+Minería metálica	9.2	2.2	4.9
+Producto Bruto Interno	-0.6	3.1	3
+
+
+Tasa de interés de referencia: Reducción a 5.25% a septiembre de 2024.
+Tipo de cambio: Se proyecta en S/ 3.80 por dólar a fines de 2024
+Inflación: Proyección de 2.3% para 2024 
+PBI: Crecimiento proyectado de 3.1% en 2024
+Déficit fiscal: Se estima en 3.3% del PBI en 2024
+Cobre
+Precio Actual (agosto 2024): USD 4.07 por libra.
+
+zinc
+el precio internacional del zinc experimentó una disminución del 3%, bajando de USD/lb. 1,28 en junio de 2024 a USD/lb. 1,23 en agosto.
+
+
+
+
+Ecuación del PBI: 
+PBI=C+I+G+(X−M)
+Ecuación de la Demanda de Dinero (Teoría Cuantitativa del Dinero): 
+M×V=P×Y
+Ecuación de Fisher sobre las Tasas de Interés: 
+i=r+π Donde:
+•	i = Tasa de interés nominal = 
+•	π = Tasa de inflación esperada =
+•	Para encontrar r: r=i−π =
+Ecuación de la Balanza de Pagos: 
+BP=CA+KA+ER
+curva de philips 
+
+elasticidad de demanda
+
+variaciones del pbi afectan las ventas
+
+consumo,dirigido a la clase media. qe va a pasar con el empleo remuneraciones. es el poder adquisitivo afecta las ventas
+identifico como el pbi puede afectar a la empresa
+
+si el pbi le afecta al cliente grande afecta indirectamente a la empresa
+
+variaciones del pbi afectan las ventas
+tasa de interes como le afecta a las CXC CXP 
+tasa de interes vinculada a la politica monetaria
+tasa de interes deuda corto plazo deuda largo plazo gastos financieros
+que va a psas con la liquidez en el sistemq
+que va a pasar con el credito
+que va a pasar con la morosidad
+
+la inflacion
+como se va a comportar a futuro
+si mis proveedores le afect la inflacion le puede afectar a mi empresa
+las CXC yCXP como les puede afectar la inflacion
+
+1 PARRAFO CON CIFRAS DE 190 PALABRAS DE RAZONAMIENTO CRITICO MACROECONOMICO
+
+1 PARRAFO CON CIFRAS DE 190 PALABRAS DE RAZONAMIENTO ESTRATEGICO MACROECONOMICO
+
+PARRAFOS DE 140 PALABRAS con ciFras sustentadas de variables macroeconomicas 
+Párrafo 1: Lo más importante a la economía internacional
+Párrafo 2: Lo más importante DE PERU la economía doméstica cifras macro PERU.
+Párrafo 3: Descripción de la empresa, lo más importante.
+Párrafo 4: Lo más importante de los cruces pbi ventas inflacion cxc cxp inventarios etc sobre la empresa 3 AÑOS.
+Párrafo 5: Resumen de las conclusiones y recomendaciones macroeconómicas a la empresa, lo más importante.
+
+
+1 variaciones del pbi afectan las ventas
+1. Tasa de interés y su efecto sobre cuentas por cobrar
+2. Tasa de interés y su efecto sobre cuentas por pagar y liquidez
+3. Inflación y su repercusión sobre costos, 
+3. Inflación y su repercusión sobre CxC y CxP
+4. Tipo de cambio y sus implicancias en operaciones y balances
+5. Consumo, Empleo y Poder Adquisitivo: Efecto Indirecto en la Empresa
+6. PBI de Clientes Clave y Efecto Indirecto sobre la empresa
+7. Política Monetaria: Tasa de Interés y Efectos sobre Cuentas por Cobrar y Pagar
+8. Liquidez del Sistema Financiero, Crédito y Riesgo de Morosidad
+9. Inflación: Efectos Proyectados y su Transmisión a Costos Operativos
+
+
+1. PBI y su efecto sobre la demanda de crédito y morosidad
+2. Tasa de interés de referencia (BCRP) y su efecto sobre el margen financiero
+3. Inflación y su repercusión sobre valor real de cartera y costos operativos
+4. Tipo de cambio y riesgo cambiario en balance y cartera
+5. Empleo y masa salarial: Efecto sobre capacidad de pago y morosidad
+6. PBI sectorial y demanda de crédito por segmento (corporativo, PYME, consumo)
+7. Política monetaria: Encaje, liquidez y transmisión a tasas de mercado
+8. Términos de intercambio y salud financiera de clientes exportadores
+9. Crédito interno privado y profundización financiera
+10. Riesgo sistémico: Contagio, concentración y ciclo crediticio
+
+
+3.1 Perfil Corporativo y Estructura Financiera de MAPFRE
+3.2 PBI y su Efecto sobre Primas de Seguros
+3.3 Tasa de Interés y su Efecto sobre Portafolio de Inversiones
+3.4 Tasa de Interés y su Efecto sobre Reservas Técnicas
+3.5 Inflación y su Efecto sobre Costos de Siniestros
+3.6 Inflación y su Efecto sobre Cuentas por Cobrar de Seguros
+3.7 Tipo de Cambio y su Efecto sobre Siniestros Dolarizados
+3.8 Tipo de Cambio y su Efecto sobre Portafolio Dolarizado
+3.9 Consumo y Empleo: Efecto sobre Seguros Individuales
+3.10 PBI Sectorial: Efecto sobre Seguros Corporativos
+3.11 Crédito Bancario y Seguros Vinculados
+3.12 Términos de Intercambio y Poder Adquisitivo
+
+Evaluación Rúbrica del Curso (Cada concepto es referida al tema macroeconómico y su enfoque basado en pensamiento crítico y estratégico)
+
+Algunas variables claves con cifras destacadas. Muchas de las recomendaciones y sugerencias no son de naturaleza macro, así como no fluyen del trabajo realizado.
+
+Puntaje máximo potencial: 3
+Interpretar la situación macroeconómica internacional,...
+Analizar razonamiento económico-técnico a la coyuntura y perspectivas macro del país,...
+
+Puntaje máximo potencial: 5
+Argumentar
+
+(Cadenas de inferencias lógicas con sustento económico,...)
+
+Puntaje máximo potencial: 3
+Análisis de las tendencias del entorno local, regional y global que impactan en una organización (...diferentes escenarios posibles....)
+
+Puntaje máximo potencial: 4
+Diseñar la estrategia empresarial dinámica
+
+(...recomendaciones macroeconómicas específicas...)
+
+Puntaje máximo potencial: 3
+Ortografía, redacción y capacidad de síntesis
+
+Puntaje máximo potencial: 2
