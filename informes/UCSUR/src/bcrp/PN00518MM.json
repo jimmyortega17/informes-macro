@@ -1,0 +1,35 @@
+{
+"config":
+{
+"title":"Crédito del sistema financiero al sector privado (fin de periodo)",
+"series":
+[
+{
+"name":"Crédito del sistema financiero al sector privado (fin de periodo) - Crédito Total (millones S/)",
+"dec":"0"
+}]
+},
+"periods":
+[
+{
+"name":"Ene.2026",
+"values":["479053.70014576"]
+},
+{
+"name":"Feb.2026",
+"values":["480818.499549784"]
+},
+{
+"name":"Mar.2026",
+"values":["487171.630418816"]
+},
+{
+"name":"Abr.2026",
+"values":["495751.783357375"]
+},
+{
+"name":"May.2026",
+"values":["499870.127594744"]
+}
+]
+}
