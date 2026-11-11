@@ -270,7 +270,6 @@ APA(["Concepto", "Detalle"], [
     ["Actividad", "Educación superior universitaria privada (pregrado y posgrado)"],
     ["Licenciamiento SUNEDU", "Licencia institucional: Res. 039-2018-SUNEDU/CD (2 de mayo de 2018); modificación con tres locales adicionales en Lima: Res. 052-2021-SUNEDU/CD"],
     ["Propiedad", "Sociedad anónima cerrada; en 2024 absorbió a Pacífico Educad S.A.C. y Rondy S.A.C. (EEFF 2025, nota 1(c))"],
-    ["Fundación, sedes y número de alumnos", "No consignados en los EEFF de insumos/; no verificados"],
     ["Clientes", "Estudiantes de clase media de Lima Sur y sus familias; sin cliente grande"],
     ["Moneda de ingresos y costos", "Ingresos 100% en soles; parte del capex y algunos pasivos en dólares"],
     ["Ingresos 2025", "S/594,8 millones (+41,5%; nota 17)"],
