@@ -143,9 +143,9 @@ La cifra de «US$90 MM anuales» difundida por la prensa en 2022 era una **proye
 
 ## 6. Actualización de la tasa de referencia (V3)
 
-- El BCRP subió la tasa de referencia de 4,25% a 4,50% (+25 pb), vigente desde el 13-nov-2026. Es la primera alza tras 14 meses de pausa. Motivos: inflación de 5,25% en octubre y choques de oferta en alimentos y energía.
-- Tasas de ventanilla: depósitos overnight 2,25%; reportes y créditos de regulación monetaria 4,75%. Próxima reunión: 10-dic-2026.
-- Fuentes: Gestión (13-nov-2026), RPP y Nota Informativa del Programa Monetario. BCRPData (PD12301MD) registra 4,25% hasta el 12-nov.
+- El Directorio del BCRP subió la tasa de referencia de 4,25% a 4,50% (+25 pb) el 12-nov-2026, con vigencia desde el 13-nov. Es la primera alza tras 14 meses de pausa. Motivos: inflación de 5,25% en octubre y choques de oferta en alimentos y energía. Próxima reunión: 10-dic-2026.
+- Fuentes: La República, Forbes Perú, RPP, Infobae/EFE y Gestión. BCRPData (PD12301MD) registra 4,25% hasta el 12-nov.
+- Las tasas de ventanilla no se citan: las cifras disponibles corresponden al nivel anterior y la nota del BCRP no se pudo verificar.
 - Recálculos:
 
   | Concepto | Cálculo | Lectura |
