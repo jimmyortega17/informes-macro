@@ -32,7 +32,7 @@ def set_font_style(s, bold=None):
     for a in ("w:asciiTheme", "w:hAnsiTheme", "w:cstheme", "w:eastAsiaTheme"):
         if rf.get(qn(a)) is not None: del rf.attrib[qn(a)]
 set_font_style(doc.styles["Normal"])
-doc.styles["Normal"].paragraph_format.space_after = Pt(6); doc.styles["Normal"].paragraph_format.line_spacing = 1.15
+doc.styles["Normal"].paragraph_format.space_after = Pt(4); doc.styles["Normal"].paragraph_format.line_spacing = 1.15
 for h in ("Heading 1", "Heading 2"):
     st = doc.styles[h]; set_font_style(st, True); st.font.italic = False
     st.paragraph_format.space_before = Pt(12); st.paragraph_format.space_after = Pt(6); st.paragraph_format.keep_with_next = True

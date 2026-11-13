@@ -84,3 +84,17 @@ for i,(k,p) in enumerate([("Alto",0.25),("Base",0.5),("Bajo",0.25)],4):
 ws.cell(8,1,"Elasticidades (2027P, cobre base ±10%): ventas 0,86; EBITDA 1,55; utilidad neta 1,89. Precio de equilibrio (EBIT = 0): US$2,83/lb. TC +10% → EBITDA +US$4,5 MM.")
 ws.column_dimensions["A"].width=14
 wb.save(dst); print("eeff ok", wb.sheetnames)
+wb=openpyxl.load_workbook(dst)
+ws=wb.create_sheet("Plan_vs_Real",5)
+ws["A1"]="Plan de minado (SINIA/MINAM, SMPCM UM Cobriza, info dic-2021) vs producción real (MINEM)"; ws["A1"].font=Font(bold=True,size=12)
+hdr=["Año","Mineral plan (t)","Concentrado plan (t secas)","Cu plan (t)","Ley cabeza implícita plan (%)","Ley conc. plan (%)","Cu real MINEM (TMF)","Cumplimiento (%)","Mineral estimado grupo (Mt)"]
+for j,h in enumerate(hdr): c=ws.cell(3,1+j,h); c.font=Font(bold=True,color="FFFFFF"); c.fill=PatternFill("solid",fgColor="1F3864")
+plan=[("2022",548000,19461,4281,0),("2023",1649000,60025,13806,8351),("2024",1644000,64755,15217,14791),("2025",1826000,74820,17583,16545)]
+for i,(y,mi,co,cu,re_) in enumerate(plan,4):
+    vals=[y,mi,co,cu,cu/mi*100,cu/co*100,re_,re_/cu*100,R['mineral'].get(y)]
+    for j,v in enumerate(vals):
+        c=ws.cell(i,1+j,v)
+        if isinstance(v,float): c.number_format="0.00"
+ws.cell(9,1,"Calibración: el supuesto del grupo (ley 1,0% × recuperación 92% = 0,92% efectivo) frente a 0,93% (2024) y 0,96% (2025) del plan; mineral estimado a <2% del plan. Concentrado 23,5% vs 24% supuesto: +US$0,1-0,2 MM de TC/RC y flete al año (no material).")
+ws.cell(10,1,"Conceptos: (a) producción MINEM = dato real; (b) ventas locales a traders = estimación; (c) exportaciones SUNAT por RUC = 0 para OCP; (d) ingresos tributarios = reservados.")
+wb.save(dst); print("plan ok")

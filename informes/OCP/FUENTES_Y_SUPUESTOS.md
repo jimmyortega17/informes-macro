@@ -97,3 +97,46 @@ Origen: Italia 4,40; Alemania 1,19; EE.UU. 0,56; Canadá 0,42; China 0,34 (US$ M
 | China | Destino final probable (benchmark TC/RC de 0 en 2026) |
 
 En el informe se presentarán como «clientes declarados por la empresa / según información del grupo», sin atribuir contratos que no tengan fuente.
+
+## 5. Marco conceptual, plan de minado y calibración (V2)
+
+**Cuatro conceptos que no son equivalentes:**
+
+| Concepto | Fuente | Estado en este trabajo |
+|---|---|---|
+| (a) Producción minera | Declarada al MINEM (ESTAMIN/DAC) | **Dato real** |
+| (b) Ventas comerciales | Ventas locales de concentrado a traders | **Estimación del grupo**, nunca «ventas reales verificadas» |
+| (c) Exportaciones | SUNAT/Aduanas, por RUC del exportador | 0 con el RUC de OCP (el exportador es el trader) |
+| (d) Ingresos declarados a SUNAT | Reserva tributaria | No públicos |
+
+La cifra de «US$90 MM anuales» difundida por la prensa en 2022 era una **proyección**, no una venta.
+
+**Línea de tiempo:**
+
+| Año | Hecho |
+|---|---|
+| 2021 | Doe Run Perú en liquidación; sin producción de OCP |
+| 2022 | Adjudicación a OCP por US$19,7 MM + IGV (precio de activos, no ventas); inicio de actividades el 21/06/2022; toma de posesión el 19/10/2022 |
+| 2023 | Facturación electrónica desde feb-2023; arranque de producción |
+| 2024-2025 | Producción MINEM (14.791 y 16.545 TMF de Cu) |
+
+**Plan de minado frente a producción real.** Fuente: SINIA/MINAM, *Segunda Modificación del Plan de Cierre de Mina de la UM Cobriza*, plan de minado 2022-2035 con información a dic-2021. https://sinia.minam.gob.pe/sites/default/files/siar-huancavelica/archivos/public/docs/informe_final_de_la_smpcm_-_um_cobriza2.pdf. No se pudo descargar desde este entorno; las cifras son las de la investigación aportada por el usuario.
+
+| Año | Mineral plan (t) | Concentrado plan (t secas) | Cu plan (t) | Cu real MINEM | Cumplimiento |
+|---|---|---|---|---|---|
+| 2022 | 548.000 | 19.461 | 4.281 | 0 | 0% |
+| 2023 | 1.649.000 | 60.025 | 13.806 | 8.351 | 60% |
+| 2024 | 1.644.000 | 64.755 | 15.217 | 14.791 | 97% |
+| 2025 | 1.826.000 | 74.820 | 17.583 | 16.545 | 94% |
+
+**Calibración de los supuestos:**
+- La ley de cabeza implícita del plan es 0,84% / 0,93% / 0,96% (2023-2025), frente a 0,92% efectivo del grupo (ley de 1,0% × recuperación de 92%).
+- El mineral estimado (1,61 y 1,80 Mt en 2024 y 2025) difiere menos de 2% del plan.
+- La ley del concentrado del plan es 23%-23,5%, frente a 24% del grupo. Con 23,5%, el TC/RC y el flete suben US$0,1-0,2 MM al año, lo que no es material.
+- **Se mantienen los supuestos.**
+
+**Subproductos.** La web de OCP menciona Ag, Pb, Zn y Au, pero el MINEM solo registra Cu y Ag: los demás metales existen en el yacimiento pero no se reportan como producción comercial.
+
+**Empleo.** 604 trabajadores recontratados en 2022 (prensa); 437-461 trabajadores mensuales en planilla en ene-nov 2025 (datosperu.org), cifra que puede excluir contratistas.
+
+**MEF.** No se publican la regalía ni el IEM individuales de Cobriza; en el informe se presentan como estimados.

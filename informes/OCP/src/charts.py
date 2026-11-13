@@ -209,7 +209,7 @@ ax.axvline(5.75,color=NA,ls="--",lw=2); ax.text(5.85,0.4,"Yn (OALP)",color=NA,fo
 eq(ax,5.733,4.9,"E₀ 2025: π 1,5%; PBI 3,4%",AZ,dx=12,dy=-34); eq(ax,5.6,5.7,"E₁ 2026: π 5,25%; PBI 3,2%",RO,dx=-205,dy=8)
 save(fig,"m3.png")
 # m4 isocuanta minera
-fig,ax=model_axes("Trabajo (L): 604 trabajadores y contratistas","Capital (K): equipos, filtros, bombas")
+fig,ax=model_axes("Trabajo (L): 437-461 en planilla (2025) y contratistas","Capital (K): equipos, filtros, bombas")
 L_=np.linspace(1.2,9.5,100)
 ax.plot(L_,16/L_,color=AZ,lw=2.5); ax.text(6.9,1.25,"Q₀: 16.545 TMF Cu (2025)",color=AZ,fontweight="bold")
 ax.plot(L_,20/L_,color=AZ,lw=2.5,ls="--"); ax.text(6.9,3.0,"Q₁: ampliación a 12.000 t/d",color=AZ,fontweight="bold")
@@ -249,7 +249,7 @@ ishikawa("i1.png","Ventas y costos\nde OCP Cobriza\n2026-2027",[
  ("Traders",["Glencore (Perubar)","Mercuria","Prepagos y términos"],GR)])
 ishikawa("i2.png","Producción, costos\ny caja de OCP\n2026-2028",[
  ("PBI minero",["Minería metálica −0,2% (2026)","MMM: +3,0% (2027)","OCP 0,6% del Cu nacional"],VE),
- ("Inflación",["π Lima 5,25%","Insumos locales","Planilla de 604 trabajadores"],RO),
+ ("Inflación",["π Lima 5,25%","Insumos locales","Planilla de 437-461 (2025)"],RO),
  ("Tipo de cambio",["Ventas en US$","~55% del costo en soles","S/3,40–3,50"],VE),
  ("Tasa y Fisher",["Referencia 4,25%","r ex ante 1,20%","r ex post −1,00%"],GR),
  ("TI y BP",["TI +18,1%","CA +4,0% del PBI","RIN US$96.668 MM"],VE),
@@ -264,7 +264,7 @@ ishikawa("i5.png","Ventas de OCP\n(US$ MM)",[
 ishikawa("i6.png","Costo operativo\nde OCP (US$/t)",[
  ("Inflación local",["π 5,25% (oct-26)","Reactivos y explosivos","Bolas de molienda"],RO),
  ("Petróleo",["WTI US$98,9","Diésel de flota y fletes","Energía"],RO),
- ("Salarios",["604 trabajadores","Participación 8%","Convenio colectivo"],RO),
+ ("Salarios",["437-461 en planilla","Participación 8%","Convenio colectivo"],RO),
  ("Escala",["Ritmo ~5.100 t/d","Planta de 9.100 t/d","Costo fijo diluido"],VE),
  ("Referencias",["Volcan 49-70 US$/t","Cerro Lindo 39,9 US$/t","OCP 50-56 US$/t"],GR),
  ("Tipo de cambio",["~55% en soles","Sol fuerte encarece","US$ cubre ventas"],GR)])
@@ -299,3 +299,11 @@ vl(a1,xs[-1],u[-1][1],"4,4",color=AZ)
 a2.plot(xs,[yi[n] for n,_ in u],color=VE,marker="o",ms=3); a2.set_xticks(xs[::4]); a2.set_xticklabels([lab(n) for n,_ in u][::4],rotation=45,fontsize=9)
 a2.set_ylabel("S/ por mes (nominal)"); a2.set_title("Ingreso promedio mensual",fontsize=10); a1.set_title("Tasa de desempleo",fontsize=10)
 vl(a2,xs[-1],yi[u[-1][0]],"2.302"); save(fig,"g12.png")
+# f5 plan de minado vs producción real
+yy=["2022","2023","2024","2025"]; plan=[4281,13806,15217,17583]; real=[0,8351,14791,16545]
+fig,ax=plt.subplots(figsize=(7.5,3.2)); x=np.arange(4); w=0.38
+ax.bar(x-w/2,plan,w,color=GR,label="Plan de minado (SMPCM, dic-2021)"); ax.bar(x+w/2,real,w,color=AZ,label="Producción real (MINEM)")
+for xi,v in zip(x-w/2,plan): vl(ax,xi,v,f1(v,0))
+for i,(xi,v) in enumerate(zip(x+w/2,real)):
+    if v: vl(ax,xi,v,f"{f1(v,0)}\n({f1(v/plan[i]*100,0)}%)",color=AZ)
+ax.set_xticks(x); ax.set_xticklabels(yy); ax.set_ylabel("Cobre contenido (t)"); ax.set_ylim(0,21500); ax.legend(frameon=False,fontsize=9,loc="upper left"); save(fig,"f5.png")
