@@ -25,7 +25,7 @@ _CADENA = CADENA
 import re as _re
 _NC = [0]
 def CADENA(titulo, elems, nota=None, fuente=None):
-    _NC[0] += 1; titulo = f"Cadena {_NC[0]}. " + _re.sub(r"^Cadena \d+\.\s*", "", titulo)
+    _NC[0] += 1; titulo = f"Cadena {_NC[0]}. " + _re.sub(r"^Cadena\s*\d*\.\s*", "", titulo)
     _CADENA(titulo, elems, None)
     p = doc.add_paragraph()
     if nota: run(p, nota + " ", True)
@@ -71,9 +71,9 @@ doc.add_page_break()
 # ============ RESUMEN ============
 H1("Resumen")
 T("El entorno internacional de 2026 es el más favorable para un productor de concentrado de cobre de la última década, pero esa ventaja depende de China y de un precio que puede revertirse. El cobre promedió US$6,14 por libra entre enero y octubre, 36% más que en 2025, y la plata US$71,6 por onza, 79% más (BCRPData), porque la demanda de redes eléctricas e inteligencia artificial choca con una oferta de mina rígida: las fundiciones chinas aceptaron un cargo de tratamiento de US$0 en 2026. El mundo crecería 3,1% y China 4,5% (BCRP, RI setiembre 2026). En sentido contrario, la Fed subió su tasa a 3,75%–4,00% y el petróleo llegó a US$98,9 por barril, lo que encarece el diésel, los fletes y el capex importado. " + pgN("s1int"))
-T("La economía peruana crece 3,2% en 2026 por la demanda interna, no por la minería, y esa combinación sube los costos locales de una mina sin elevar su producción. El PBI de minería metálica cayó 0,2% entre enero y agosto, después de crecer 10,9% en 2023, 3,2% en 2024 y 1,9% en 2025 (BCRPData), y el MEF espera 1,7% en 2026, 3,0% en 2027 y 1,5% en 2028 (MMM 2027-2030). Los términos de intercambio mejoran 18,1% y mantienen el sol en S/3,412. La inflación de Lima subió a 5,25% en octubre, sobre el rango meta, y la tasa real ex post es −1,00% con la referencia en 4,25%. Para OCP, que vende en dólares y paga cerca de 55% de su costo en soles, la inflación local y un sol fuerte se suman contra el margen. " + pgN("s1peru"))
+T("La economía peruana crece 3,2% en 2026 por la demanda interna, no por la minería, y esa combinación sube los costos locales de una mina sin elevar su producción. El PBI de minería metálica cayó 0,2% entre enero y agosto, después de crecer 10,9% en 2023, 3,2% en 2024 y 1,9% en 2025 (BCRPData), y el MEF espera 1,7% en 2026, 3,0% en 2027 y 1,5% en 2028 (MMM 2027-2030). Los términos de intercambio mejoran 18,1% y mantienen el sol en S/3,412. La inflación de Lima subió a 5,25% en octubre, sobre el rango meta, el 13 de noviembre el BCRP subió su tasa de 4,25% a 4,50%, la primera alza en 14 meses, y la tasa real ex post sigue negativa (−0,75%). Para OCP, que vende en dólares y paga cerca de 55% de su costo en soles, la inflación local y un sol fuerte se suman contra el margen. " + pgN("s1peru"))
 T("Operadores Concentrados Peruanos S.A.C. (OCP), del Grupo Dyer Coriat, opera la mina subterránea Cobriza (Huancavelica), que compró en 2022 por US$22 millones y reinició en febrero de 2023 (437-461 trabajadores en planilla en 2025). Produjo 16.545 toneladas de cobre fino y 711 mil onzas de plata en 2025 (MINEM), 0,6% del cobre nacional, sin zinc ni oro. Vende concentrado en dólares a traders en el Callao, según la empresa Perubar (Glencore) y Mercuria; SUNAT no registra exportaciones a su nombre. Como no publica estados financieros, el grupo los estimó: ventas de US$176,6 millones, EBITDA de US$72,7 millones (41%) y utilidad neta de US$37,0 millones en 2025, con un capex de US$40 millones y deuda con vinculadas de US$45,6 millones. Recibe crédito de proveedores y de su grupo, no otorga crédito y tiene dos clientes grandes. " + pgN("s2desc"))
-T("La incidencia más fuerte del entorno sobre OCP pasa por el precio del cobre y no por el PBI peruano. Las ventas tienen una elasticidad de 0,86 frente al precio del cobre, el EBITDA de 1,55 y la utilidad neta de 1,89, porque el costo por tonelada es casi fijo. Con cobre de US$5,70 (MMM), las ventas serían US$233 millones en 2027; con US$7,00 subirían a US$286 millones y con US$4,50 caerían a US$177 millones, con un EBITDA de US$164, US$117 y US$64 millones, respectivamente. El precio de equilibrio está en US$2,83 por libra. La inflación de 5,25% suma unos US$3,0 millones a los costos en soles; una depreciación de 10% añadiría US$4,5 millones al EBITDA y cada 25 pb de tasa apenas US$0,1 millones de intereses. Las cuentas por cobrar (US$14,5 millones) son de traders solventes y el riesgo está en la concentración de clientes. " + pgN("s2imp"))
+T("La incidencia más fuerte del entorno sobre OCP pasa por el precio del cobre y no por el PBI peruano. Las ventas tienen una elasticidad de 0,86 frente al precio del cobre, el EBITDA de 1,55 y la utilidad neta de 1,89, porque el costo por tonelada es casi fijo. Con cobre de US$5,70 (MMM), las ventas serían US$233 millones en 2027; con US$7,00 subirían a US$286 millones y con US$4,50 caerían a US$177 millones, con un EBITDA de US$164, US$117 y US$64 millones, respectivamente. El precio de equilibrio está en US$2,83 por libra. La inflación de 5,25% suma unos US$3,0 millones a los costos en soles; una depreciación de 10% añadiría US$4,5 millones al EBITDA y el alza de 25 pb del BCRP apenas US$0,1 millones de intereses. Las cuentas por cobrar (US$14,5 millones) son de traders solventes y el riesgo está en la concentración de clientes. " + pgN("s2imp"))
 T("La conclusión central es que OCP tiene hoy un margen extraordinario que no depende de su gestión sino de un ciclo de precios que el propio mercado considera transitorio: el MEF proyecta que el cobre baje de US$5,90 en 2026 a US$5,60 en 2028, y un enfriamiento de China lo llevaría cerca de US$4,50. La recomendación macroeconómica principal es fijar con sus compradores, mientras el cobre supere US$5,50 por libra, el precio de 30% a 40% de la producción de 2027 mediante coberturas o un contrato de compra anticipada con Glencore o Mercuria, y usar ese flujo para financiar la ampliación a 12.000 t/d sin deuda nueva. La meta es asegurar un EBITDA superior a US$80 millones en 2027 aunque se materialice el escenario bajo, frente a US$64 millones sin cobertura. " + pgN("s3"))
 
 # ============ SECCIÓN 1 ============
@@ -88,7 +88,7 @@ for t_, txt in (("begin", None), (None, "PAGE"), ("end", None)):
     r._r.append(e)
 pgn = OxmlElement("w:pgNumType"); pgn.set(qn("w:start"), "1"); new._sectPr.append(pgn)
 
-H1("SECCIÓN 1"); MARK("s1int")
+H1("Sección 1"); MARK("s1int")
 H2("Análisis de la economía internacional y sus incidencias sobre la economía del país en que la empresa desarrolla sus principales actividades.")
 
 SUB("1. Crecimiento económico mundial y demanda de cobre")
@@ -130,20 +130,20 @@ CADENA("Cadena 4. Precio del Cobre (Pcu) y Volumen (Q) → Margen de OCP",
        "MINEM; BCRPData; " + EST + ".")
 
 SUB("4. Política monetaria global y tipo de cambio")
-T("La Reserva Federal subió su tasa 25 pb el 17 de setiembre de 2026, a 3,75%–4,00%, después de haberla recortado a 3,50%–3,75% en diciembre de 2025, porque la inflación PCE de 2026 llegaría a 3,7% (Federal Reserve, 2026; BCRP, RI setiembre 2026). Con el BCRP en 4,25% desde setiembre de 2025, el diferencial frente al punto medio de la Fed bajó a 0,375 pp. El sol no se debilitó: cotizó S/3,412 el 9 de noviembre, frente a S/3,367 en diciembre de 2025 y a S/3,568 de promedio en 2025 (BCRPData, PN01210PM y PD04638PD), porque el superávit comercial y las compras del BCRP compensan el menor atractivo de las tasas. ")
+T("La Reserva Federal subió su tasa 25 pb el 17 de setiembre de 2026, a 3,75%–4,00%, después de haberla recortado a 3,50%–3,75% en diciembre de 2025, porque la inflación PCE de 2026 llegaría a 3,7% (Federal Reserve, 2026; BCRP, RI setiembre 2026). El BCRP mantuvo 4,25% desde setiembre de 2025 hasta el 13 de noviembre de 2026, cuando la subió a 4,50%; el diferencial frente al punto medio de la Fed pasó de 0,375 pp a 0,625 pp. El sol no se debilitó: cotizó S/3,412 el 9 de noviembre, frente a S/3,367 en diciembre de 2025 y a S/3,568 de promedio en 2025 (BCRPData, PN01210PM y PD04638PD), porque el superávit comercial y las compras del BCRP compensan el menor atractivo de las tasas. ")
 FORM("Paridad de tasas: i = i* + (depreciación esperada + riesgo país)",
      "i = tasa de interés en soles (BCRP); i* = tasa de interés en dólares (Fed); el paréntesis es lo que un inversionista exige por pasar de dólares a soles.",
-     "4,25% = 3,875% + (depreciación esperada + riesgo país)  →  depreciación esperada + riesgo país = 4,25% − 3,875% = 0,375 pp.",
-     "el premio por invertir en soles es casi nulo; el sol no se sostiene por las tasas sino por los dólares del cobre. Si el cobre baja, el sol puede depreciarse, lo que a OCP le conviene porque vende en dólares.")
-CAP("Gráfico 5. Tasa de Referencia del BCRP y Tasa de la Fed, enero 2024 – octubre 2026 (%)")
+     "4,50% = 3,875% + (depreciación esperada + riesgo país)  →  depreciación esperada + riesgo país = 4,50% − 3,875% = 0,625 pp (0,375 pp antes del alza del 13 de noviembre).",
+     "el premio por invertir en soles sigue siendo pequeño aun después del alza; el sol no se sostiene por las tasas sino por los dólares del cobre. Si el cobre baja, el sol puede depreciarse, lo que a OCP le conviene porque vende en dólares.")
+CAP("Gráfico 5. Tasa de Referencia del BCRP y Tasa de la Fed, enero 2024 – noviembre 2026 (%)")
 IMGW("g4.png")
-SRC("BCRPData, serie PD04722MM; Federal Reserve (2026), cambios de la tasa de política (punto medio del rango).")
+SRC("BCRPData, series PD04722MM y PD12301MD; Gestión (2026) para el alza del 13 de noviembre; Federal Reserve (2026), punto medio del rango.")
 CAP("Modelo 2. Mercado Cambiario: Oferta y Demanda de Dólares, 2025 – noviembre 2026")
 IMGW("m2.png", 6.6)
 SRC("BCRPData; BCRP, RI setiembre 2026. Diagrama conceptual con valores observados.")
 INT("El modelo 2 muestra que las exportaciones mineras desplazan la oferta de dólares de S$₀ a S$₁ y llevan el equilibrio de E₀ (S/3,568, promedio de 2025) a E₁ (S/3,412). La paradoja para OCP es que el mismo cobre caro que eleva sus ventas aprecia el sol y encarece sus costos en soles: parte de su ganancia de precio la devuelve por el tipo de cambio.")
 CADENA("Cadena 5. Tasa de la Fed (i*) → Tipo de Cambio (E) → Costos en Dólares de OCP",
-       [("↑i*", "Fed 3,75%–4,00%"), ("↓(i − i*)", "0,375 pp"), ("↑Superávit externo", "US$48.865 MM"), ("↓E", "S/3,568 → 3,412"), ("↑Costo en US$", "~55% del costo en soles"), ("↓Margen OCP", "−US$4,5 MM por 10% de TC")],
+       [("↑i*", "Fed 3,75%–4,00%"), ("(i − i*) estrecho", "0,625 pp (13-nov)"), ("↑Superávit externo", "US$48.865 MM"), ("↓E", "S/3,568 → 3,412"), ("↑Costo en US$", "~55% del costo en soles"), ("↓Margen OCP", "−US$4,5 MM por 10% de TC")],
        "Si la Fed sube la tasa pero el superávit minero domina el mercado cambiario → el sol se aprecia → los costos en soles de OCP suben medidos en dólares → se reduce parte del margen que dio el precio del cobre.")
 
 SUB("5. Economía de Estados Unidos, inflación importada y costo del capex importado")
@@ -163,7 +163,7 @@ CADENA("Cadena 6. Inflación de EE.UU. y Europa (π*) → Tipo de Cambio (E) →
 CAP("Diagrama 1. Ishikawa de Factores Internacionales que Afectan a OCP – Cobriza, 2026–2027")
 IMGW("i1.png")
 SRC("BCRP, RI setiembre 2026; BCRPData; Federal Reserve (2026); Veritrade/SUNAT. Diagrama conceptual.")
-CRIT("el entorno internacional le entrega a OCP un margen que no se explica por su eficiencia. Entre 2025 y 2026 la producción de cobre de Cobriza cayó 3,2%, pero las ventas estimadas subieron 41% porque el cobre subió 36% y la plata 79%. Ese resultado descansa en tres supuestos frágiles. Primero, que China siga creciendo cerca de 4,5%: el BCRP ya proyecta 4,2% para 2027. Segundo, que la escasez de concentrado persista: un cargo de tratamiento de US$0 es históricamente anómalo y las fundiciones chinas están perdiendo dinero, por lo que reducirán su producción o subirán los cargos. Tercero, que la Fed no fuerce un dólar más fuerte: con la PCE en 3,7%, un nuevo alza encarecería el dólar y suele bajar los metales. El petróleo en US$98,9, en cambio, sí se trasladó a costos. La conjetura del grupo es que el ciclo de precios de 2026 es el pico y no el nuevo piso: el MEF ya proyecta US$5,60 en 2028, 9% menos que el promedio de 2026, y el escenario bajo de US$4,50 solo requiere que China vuelva a crecer cerca de 4%, que es su tendencia.")
+CRIT("el entorno internacional le entrega a OCP un margen que no se explica por su eficiencia. Entre 2025 y 2026 la producción de cobre de Cobriza cayó 3,2%, pero las ventas estimadas subieron 41% porque el cobre subió 36% y la plata 79%. Ese resultado descansa en tres supuestos frágiles. Primero, que China siga creciendo cerca de 4,5%: el BCRP ya proyecta 4,2% para 2027. Segundo, que la escasez de concentrado persista: un cargo de tratamiento de US$0 es históricamente anómalo y las fundiciones chinas están perdiendo dinero, por lo que reducirán su producción o subirán los cargos. Tercero, que la Fed no fuerce un dólar más fuerte: con la PCE en 3,7%, una nueva alza encarecería el dólar y suele bajar los metales. El petróleo en US$98,9, en cambio, sí se trasladó a costos. La conjetura del grupo es que el ciclo de precios de 2026 es el pico y no el nuevo piso: el MEF ya proyecta US$5,60 en 2028, 9% menos que el promedio de 2026, y el escenario bajo de US$4,50 solo requiere que China vuelva a crecer cerca de 4%, que es su tendencia.")
 ESTR("OCP debe convertir parte de un precio extraordinario en flujo asegurado antes de que el ciclo cambie. Con el cobre sobre US$6,00, fijar el precio de 30% a 40% de la producción de 2027 (unas 6.000 toneladas) mediante un contrato de compra anticipada o una cobertura con su comprador le aseguraría unos US$75 millones de ingresos aunque el cobre caiga a US$4,50, porque cada dólar por libra sobre 6.000 toneladas vale US$13 millones. El costo es renunciar al alza si el cobre sube a US$7,00, pero el riesgo es asimétrico: en el escenario alto el EBITDA de 2027 sería US$151 millones con cobertura frente a US$164 millones sin ella, y en el bajo subiría de US$64 a US$83 millones gracias a ella. Al mismo tiempo, debe negociar con Glencore o Mercuria un cargo de tratamiento plurianual cercano a cero mientras el mercado spot sea negativo, y comprar en 2027 el equipamiento europeo pendiente de la ampliación, porque el euro y la inflación de EE.UU. lo encarecen cada trimestre que se posterga.")
 
 H2("Situación macroeconómica del Perú y perspectivas 2025–2027: Dependencia de Operadores Concentrados Peruanos S.A.C. del entorno nacional"); MARK("s1peru")
@@ -174,7 +174,7 @@ FORM("PBI = C + I + G + (X − M)",
      "C = consumo de las familias; I = inversión de las empresas y del Estado (más inventarios); G = consumo del gobierno; X = exportaciones; M = importaciones. Cada término se expresa como su aporte en puntos al crecimiento de 2026.",
      "3,20% = 2,36 (C) + 2,87 (inversión privada) + 0,06 (inversión pública) + 0,70 (inventarios) + 0,45 (G) + 0,03 (X) − 3,27 (M), con las ponderaciones reales de 2025 (BCRPData, PN02528AQ a PN02537AQ).",
      "la suma cuadra con el 3,2% del BCRP y muestra que las exportaciones en volumen aportan apenas 0,03 pp: el auge del cobre llega al PBI por precios e inversión, no por más toneladas. Para OCP, su sector no lidera el crecimiento, pero sí lo financia: la inversión privada (+14,0%) incluye la ampliación de minas como Cobriza.")
-T("La política fiscal acompaña poco. El consumo público (G) crecería 3,2% en 2026 y 2,3% en 2027 según el BCRP, y apenas 2,94% en 2026 y 0% en 2027 y 2028 según el MEF, que reduce el déficit fiscal de 1,76% a 1,02% del PBI entre 2026 y 2028, con una deuda pública de 29,3% del PBI (MMM 2027-2030, cuadro C-01). La política monetaria, en cambio, sigue holgada (tasa de 4,25% con inflación de 5,25%). El comportamiento de los agentes explica el resto: los inversionistas privados responden al cobre caro con una inversión que crece 14,0% (10,5% según el MEF) y los consumidores mantienen un gasto de 3,6% pese a la caída del salario real. Para OCP, la consolidación fiscal importa por la regalía y el IEM: con el cobre alto, el Estado recauda más de la minería. El MEF y la SUNAT no publican la regalía ni el IEM por empresa, de modo que el monto de OCP es una estimación del grupo (US$9,6 millones en 2026P) y ese ingreso le permite reducir el déficit sin subir impuestos.")
+T("La política fiscal acompaña poco. El consumo público (G) crecería 3,2% en 2026 y 2,3% en 2027 según el BCRP, y apenas 2,94% en 2026 y 0% en 2027 y 2028 según el MEF, que reduce el déficit fiscal de 1,76% a 1,02% del PBI entre 2026 y 2028, con una deuda pública de 29,3% del PBI (MMM 2027-2030, cuadro C-01). La política monetaria empezó a ajustarse: el BCRP subió la tasa a 4,50% el 13 de noviembre, aunque con inflación de 5,25% sigue siendo expansiva en términos reales. El comportamiento de los agentes explica el resto: los inversionistas privados responden al cobre caro con una inversión que crece 14,0% (10,5% según el MEF) y los consumidores mantienen un gasto de 3,6% pese a la caída del salario real. Para OCP, la consolidación fiscal importa por la regalía y el IEM: con el cobre alto, el Estado recauda más de la minería. El MEF y la SUNAT no publican la regalía ni el IEM por empresa, de modo que el monto de OCP es una estimación del grupo (US$9,6 millones en 2026P) y ese ingreso le permite reducir el déficit sin subir impuestos.")
 CAP("Gráfico 7. PBI Total y Minería Metálica, 2022–2028P (var. % real)")
 IMGW("g6.png")
 SRC("BCRPData (PN01728AM y PN01760AM); MEF, MMM 2027-2030, cuadros C-01 y C-02 (2027P-2028P). * 2026: enero-agosto.")
@@ -196,7 +196,7 @@ FORM("Inflación que faltaría en noviembre-diciembre = (1 + meta del año) / (1
 CAP("Gráfico 8. Inflación en Lima Metropolitana y Expectativas, enero 2025 – octubre 2026 (%)")
 IMGW("g7.png")
 SRC("BCRPData, series PN01273PM y PD12912AM; BCRP, RI setiembre 2026.")
-INT("El gráfico 7 muestra que la inflación salió del rango meta en marzo y no volvió, mientras las expectativas suben a 3,05%. Para el BCRP es una señal de alza de tasas; para OCP es un aumento de costo que no puede trasladar, porque su precio de venta lo fija la LME y no el mercado peruano.")
+INT("El gráfico 7 muestra que la inflación salió del rango meta en marzo y no volvió, mientras las expectativas suben a 3,05%. Para el BCRP fue la señal que llevó al alza de noviembre; para OCP es un aumento de costo que no puede trasladar, porque su precio de venta lo fija la LME y no el mercado peruano.")
 CADENA("Cadena 8. Inflación (P) → Salarios (w) → Costo por Tonelada de OCP",
        [("↑P", "π 5,25% (oct-26)"), ("↑Insumos locales", "Diésel, explosivos, reactivos"), ("↑w", "437-461 en planilla"), ("↑Costo/t", "US$52 → 56/t"), ("Precio LME", "No se traslada"), ("↓Margen", "−US$1,0 MM por 1 pp")],
        "Si sube la inflación → suben los insumos locales y los salarios → sube el costo por tonelada → como el precio de venta lo fija la LME, OCP absorbe todo el aumento en su margen.")
@@ -205,7 +205,7 @@ SUB("3. Tipo de cambio y su efecto sobre ventas y costos")
 T("El sol cotizó S/3,412 por dólar el 9 de noviembre de 2026, apenas 1,3% por encima del promedio de diciembre de 2025, después de apreciarse 10,2% en 2025 (BCRPData). El BCRP compró US$15.715 millones en 2026 para moderar la apreciación, y el MEF proyecta un tipo de cambio promedio de S/3,39 en 2026, S/3,35 en 2027 y S/3,37 en 2028 (MMM 2027-2030, cuadro C-01). OCP tiene una exposición opuesta a la de una empresa importadora: vende 100% en dólares y, según el supuesto del grupo, paga cerca de 55% de su costo operativo en soles (planilla, contratistas, energía e insumos locales). Por eso un sol fuerte la perjudica y un sol débil la favorece.")
 CAP("Gráfico 9. Tipo de Cambio Sol/Dólar, enero 2025 – noviembre 2026")
 IMGW("g8.png")
-SRC("BCRPData, series PN01210PM (promedio mensual bancario) y PD04638PD (interbancario venta, 9 de noviembre de 2026).")
+SRC("BCRPData, series PN01210PM (promedio mensual bancario) y PD04638PD (interbancaria venta, 9 de noviembre de 2026).")
 INT("El gráfico 8 muestra que el sol se movió en una banda de S/3,36 a S/3,45 en 2026, después de una apreciación de casi 40 céntimos en 2025. Para el BCRP, esa estabilidad ancla las expectativas; para OCP, la apreciación de 2025 equivale a un alza de 4,6% de sus costos en soles medidos en dólares.")
 CADENA("Cadena 9. Precio del Cobre (Pcu) → Tipo de Cambio (E) → Margen de OCP",
        [("↑Pcu", "US$6,14/lb"), ("↑Exportaciones", "US$119.876 MM"), ("↑Oferta de US$", "Compras BCRP US$15.715 MM"), ("↓E", "S/3,568 → 3,412"), ("↑Costo en US$", "~55% del costo en soles"), ("↓Margen OCP", "Se devuelve parte del precio")],
@@ -216,7 +216,7 @@ T("La tasa de desempleo de Lima Metropolitana bajó de 5,7% a 4,4% entre los tri
 FORM("Curva de Phillips simple: π = πᵉ − β × (u − u*)",
      "π = inflación; πᵉ = inflación esperada; u = tasa de desempleo; u* = desempleo «normal» o natural, que no presiona precios; β = cuánto sube la inflación por cada punto que el desempleo baja de su nivel normal.",
      "πᵉ = 3,05% (BCRPData); u = 4,4% (Lima, setiembre 2026); u* = 6,0% y β = 0,5 (supuestos del grupo, cercanos al desempleo de Lima antes de la pandemia)  →  π = 3,05% − 0,5 × (4,4% − 6,0%) = 3,05% + 0,8% = 3,85%.",
-     "el mercado laboral apretado explica una inflación de demanda de 3,85%; la diferencia con la observada (5,25%), unos 1,4 pp, viene del choque de oferta (petróleo y El Niño). Para OCP, la parte laboral es la más persistente: un desempleo bajo sostiene los reclamos salariales en la mina aunque el petróleo baje.")
+     "el mercado laboral apretado explica una inflación de demanda de 3,85%; la diferencia con la observada (5,25%), unos 1,4 pp, viene del choque de oferta (petróleo y El Niño). Para OCP, la parte laboral es la más persistente: un desempleo bajo sostiene los reclamos salariales en la mina, aunque el petróleo baje.")
 CAP("Gráfico 10. Desempleo e Ingreso Promedio en Lima Metropolitana, enero 2025 – setiembre 2026")
 IMGW("g12.png")
 SRC("BCRPData, series PN38063GM, PN38066GM y PN38070GM (promedio móvil de tres meses), con datos del INEI.")
@@ -245,41 +245,41 @@ T("La liquidez en soles de las sociedades de depósito creció 16,7% interanual 
 FORM("Teoría cuantitativa del dinero: M × V = P × Y  (en variaciones: %ΔM + %ΔV = %ΔP + %ΔY)",
      "M = cantidad de dinero (liquidez en soles); V = velocidad, es decir, cuántas veces circula cada sol; P = nivel de precios; Y = producción real.",
      "16,7% (liquidez, setiembre 2026) + %ΔV = 4,5% (inflación de setiembre) + 3,2% (PBI 2026P)  →  %ΔV = 7,7% − 16,7% = −9,0%.",
-     "hay más dinero del que la economía usa: el exceso está guardado (la velocidad cae). Si las expectativas suben, ese dinero se gasta y presiona precios; por eso el BCRP tenderá a subir la tasa.")
+     "hay más dinero del que la economía usa: el exceso está guardado (la velocidad cae). Si las expectativas suben, ese dinero se gasta y presiona precios; por eso el BCRP empezó a subir la tasa el 13 de noviembre.")
 CAP("Gráfico 12. Liquidez en Soles e Inflación, enero 2025 – octubre 2026 (var. % 12 meses)")
 IMGW("g10.png")
 SRC("BCRPData, series PN00189MM y PN01273PM; BCRP, RI setiembre 2026.")
-INT("El gráfico 11 muestra que la liquidez crece 16,7% frente a una inflación de 5,25% y un PBI de 3,2%. La diferencia es dinero ocioso que el BCRP probablemente retirará con tasas más altas en 2027, lo que encarecerá el crédito de los contratistas mineros.")
+INT("El gráfico 11 muestra que la liquidez crece 16,7% frente a una inflación de 5,25% y un PBI de 3,2%. La diferencia es dinero ocioso que el BCRP empezó a retirar con el alza del 13 de noviembre y podría seguir retirando el 10 de diciembre, lo que encarece el crédito de los contratistas mineros.")
 CADENA("Cadena 12. Dinero (M) → Inflación (P) → Tasa (i) → Costo de los Contratistas de OCP",
-       [("↑M", "Liquidez +16,7%"), ("↓V", "−9,0%"), ("↑P", "π 5,25%"), ("↑i (riesgo)", "4,25% → 4,50%"), ("↑Costo del crédito", "Contratistas locales"), ("↑Tarifas", "Servicios mineros de OCP")],
+       [("↑M", "Liquidez +16,7%"), ("↓V", "−9,0%"), ("↑P", "π 5,25%"), ("↑i", "4,25% → 4,50% (13-nov)"), ("↑Costo del crédito", "Contratistas locales"), ("↑Tarifas", "Servicios mineros de OCP")],
        "Si la liquidez crece más que la economía → presiona los precios → el BCRP sube la tasa → se encarece el crédito de los contratistas → lo trasladan a sus tarifas → sube el costo de los servicios mineros de OCP.")
 
 SUB("7. Tasa de interés, ciclo de efectivo y capital de trabajo")
-T("El BCRP mantiene su tasa de referencia en 4,25% desde setiembre de 2025 (PD04722MM). Con expectativas de inflación de 3,05% y una inflación observada de 5,25%, la tasa real es positiva ex ante y negativa ex post:")
+T("El BCRP subió su tasa de referencia de 4,25% a 4,50% el 13 de noviembre de 2026, tras 14 meses de pausa, porque la inflación supera 5% y persisten los choques de oferta en alimentos y energía; las tasas de ventanilla quedaron en 2,25% (depósitos overnight) y 4,75% (reportes y créditos de regulación monetaria), y la próxima reunión es el 10 de diciembre (Gestión, 2026; BCRPData, PD12301MD, que registra 4,25% hasta el 12 de noviembre). Con expectativas de inflación de 3,05% y una inflación observada de 5,25%, la tasa real es positiva ex ante y negativa ex post:")
 FORM("Ecuación de Fisher: i = r + π   →   r = i − π",
      "i = tasa de interés nominal (la de referencia del BCRP); r = tasa de interés real, lo que gana de verdad quien presta; π = inflación (esperada para el cálculo ex ante, observada para el ex post).",
-     "r ex ante = 4,25% − 3,05% = 1,20%;   r ex post = 4,25% − 5,25% = −1,00%.",
-     "con la inflación de hoy, prestar en soles hace perder poder de compra: la política monetaria es estimulante. Para OCP, que se financia en dólares, el efecto directo es pequeño, pero la tasa real negativa empuja el gasto, la inflación y sus costos locales.")
+     "r ex ante = 4,50% − 3,05% = 1,45%;   r ex post = 4,50% − 5,25% = −0,75% (antes del alza: 1,20% y −1,00%).",
+     "aun después del alza, con la inflación de hoy prestar en soles hace perder poder de compra: la política monetaria sigue siendo estimulante en términos reales. Para OCP, que se financia en dólares, el efecto directo es pequeño, pero la tasa real negativa empuja el gasto, la inflación y sus costos locales.")
 T("La regla de Taylor, en su forma simple, indica qué tasa debería tener el banco central según la inflación y el uso de la capacidad de la economía:")
 FORM("Regla de Taylor simple: i = r* + π + 0,5 × (π − π*) + 0,5 × (brecha del producto)",
      "i = tasa de referencia sugerida; r* = tasa real neutral (ni estimula ni frena), 1,75%; π = inflación; π* = meta del BCRP, 2%; brecha del producto = cuánto se aleja el PBI de su potencial (positiva si la economía está «caliente»).",
-     "con la inflación observada (5,25%) y una brecha del producto de cero (supuesto del grupo): 1,75% + 5,25% + 0,5 × (5,25% − 2%) + 0,5 × 0 = 8,6%. Con la inflación esperada (3,05%): 1,75% + 3,05% + 0,5 × 1,05% + 0 = 5,3%.",
-     "en ambos casos la tasa sugerida supera el 4,25% del BCRP, de modo que la política está holgada. El BCRP prefiere mirar la inflación esperada porque el choque es de oferta, pero aun así le faltan unos 100 pb: el escenario más probable para 2027 es un alza gradual. Para OCP, un alza encarece a sus proveedores locales y puede apreciar el sol.")
-T("Para el BCRP, una tasa real ex post negativa con inflación fuera del rango meta justifica un alza de 25 pb. Para OCP, el ciclo de efectivo es corto y está en dólares: el comprador paga cerca de 90% del valor provisional al embarque y liquida el saldo uno a tres meses después, con el precio del periodo de cotización. El grupo estima cuentas por cobrar de 30 días (US$14,5 millones en 2025), inventarios de 30 días de costo y cuentas por pagar de 45 días: el capital de trabajo neto es pequeño y la tasa de interés local casi no lo afecta.")
+     "tasa vigente desde el 13 de noviembre: 4,50%. Con la inflación observada (5,25%) y una brecha del producto de cero (supuesto del grupo): 1,75% + 5,25% + 0,5 × (5,25% − 2%) + 0,5 × 0 = 8,6%. Con la inflación esperada (3,05%): 1,75% + 3,05% + 0,5 × 1,05% + 0 = 5,3%.",
+     "en ambos casos la tasa sugerida supera el 4,50% vigente: el BCRP ya empezó a subir y la regla sugiere más alzas. Con la inflación esperada le faltan unos 80 pb, unas tres alzas de 25 pb, la próxima posible el 10 de diciembre. Para OCP, cada alza encarece a sus proveedores locales y puede apreciar el sol.")
+T("Para el BCRP, una tasa real ex post negativa con inflación fuera del rango meta justificó el alza de 25 pb de noviembre y puede justificar otras. Para OCP, el ciclo de efectivo es corto y está en dólares: el comprador paga cerca de 90% del valor provisional al embarque y liquida el saldo uno a tres meses después, con el precio del periodo de cotización. El grupo estima cuentas por cobrar de 30 días (US$14,5 millones en 2025), inventarios de 30 días de costo y cuentas por pagar de 45 días: el capital de trabajo neto es pequeño y la tasa de interés local casi no lo afecta.")
 CAP("Modelo 4. IS-MP: Inversión Minera, Tasa Real y Producto, 2026")
 IMGW("m5.png", 6.6)
 SRC("BCRPData (tasa de referencia y expectativas, octubre de 2026); BCRP, RI setiembre 2026. Diagrama conceptual.")
-INT("El modelo 4 muestra la IS desplazada a la derecha (IS₁) por la inversión minera y el crédito, con la regla monetaria en r = 1,20% (E₁). Si el BCRP sube 25 pb, la MP pasa a MP₁ y el producto se modera en E₂. Para OCP el efecto directo es pequeño: su financiamiento está en dólares y depende de la Fed y de sus compradores, no del BCRP.")
+INT("El modelo 4 muestra la IS desplazada a la derecha (IS₁) por la inversión minera y el crédito, con la regla monetaria en r = 1,20% hasta octubre (E₁). El alza del 13 de noviembre lleva la MP a MP₁ (r ex ante de 1,45%) y modera el producto en E₂; nuevas alzas el 10 de diciembre la desplazarían otra vez. Para OCP el efecto directo es pequeño: su financiamiento está en dólares y depende de la Fed y de sus compradores, no del BCRP.")
 CADENA("Cadena. Tasa de Interés (i) → Inversión y Consumo → PBI (Y)",
-       [("↑i", "4,25% → 4,50% (escenario)"), ("↑r", "−1,00% → −0,75%"), ("↓I privada", "+14,0% → +8,5% (2027)"), ("↓C", "3,6% → 3,0%"), ("↓DA", "Demanda interna"), ("↓Y", "3,2% → 3,0% (2027)")],
-       "Si el BCRP sube la tasa → sube la tasa real → se encarece el crédito para invertir y consumir → crece menos la demanda interna → el PBI se modera de 3,2% a 3,0%, que es la trayectoria del RI para 2027.",
+       [("↑i", "4,25% → 4,50% (13-nov)"), ("↑r", "−1,00% → −0,75%"), ("↓I privada", "+14,0% → +8,5% (2027)"), ("↓C", "3,6% → 3,0%"), ("↓DA", "Demanda interna"), ("↓Y", "3,2% → 3,0% (2027)")],
+       "Como el BCRP subió la tasa (y puede volver a hacerlo el 10 de diciembre) → sube la tasa real → se encarece el crédito para invertir y consumir → crece menos la demanda interna → el PBI se modera de 3,2% a 3,0%, que es la trayectoria del RI para 2027.",
        "BCRP, RI setiembre 2026; BCRPData.")
 CADENA("Cadena. Tasa de Interés (i) → Tipo de Cambio (E) y Demanda → Balanza Comercial (X − M)",
-       [("↑i", "+25 pb"), ("↑(i − i*)", "0,375 → 0,625 pp"), ("↓E", "Sol más fuerte"), ("↓DA", "Menos importaciones"), ("↓M", "M +10,8% → +6,1%"), ("↑(X − M)", "Saldo US$48.865 MM")],
+       [("↑i", "+25 pb (13-nov)"), ("↑(i − i*)", "0,375 → 0,625 pp"), ("↓E", "Sol más fuerte"), ("↓DA", "Menos importaciones"), ("↓M", "M +10,8% → +6,1%"), ("↑(X − M)", "Saldo US$48.865 MM")],
        "Si sube la tasa → entran capitales y el sol se aprecia, y además se enfría la demanda interna → las importaciones crecen menos → la balanza comercial mejora; para OCP, el sol más fuerte encarece sus costos en soles medidos en dólares.",
        "BCRP, RI setiembre 2026; BCRPData.")
 CADENA("Cadena 13. Inflación (P) → Tasa de Interés (i) → Capital de Trabajo de OCP",
-       [("↑P", "π 5,25%"), ("↓r", "Ex post −1,00%"), ("↑i BCRP", "4,25% → 4,50% (escenario)"), ("↑Tasas en soles", "Proveedores locales"), ("↓Plazo de pago", "CxP 45 días"), ("↑Capital de trabajo", "+US$2,3 MM por 15 días")],
+       [("↑P", "π 5,25%"), ("↓r", "Ex post −1,00% → −0,75%"), ("↑i BCRP", "4,25% → 4,50% (13-nov)"), ("↑Tasas en soles", "Proveedores locales"), ("↓Plazo de pago", "CxP 45 días"), ("↑Capital de trabajo", "+US$2,3 MM por 15 días")],
        "Si la inflación supera el rango meta → la tasa real cae → el BCRP sube la tasa → los proveedores locales acortan plazos → OCP debe financiar más capital de trabajo, aunque su exposición directa a la tasa es baja.")
 CAP("Diagrama 2. Ishikawa de Factores Domésticos que Afectan a OCP – Cobriza, 2026–2028")
 IMGW("i2.png")
@@ -339,10 +339,10 @@ APA(["Variable", "2023", "2024", "2025", "2026P", "2027P", "Impacto en OCP"], [
     ["Cobre LME (US$/lb)", "3,85", "4,15", "4,51", "6,14", "6,38 / 5,70", "↑ Ventas y margen"],
     ["PBI minería metálica (var. %)", "10,9", "3,2", "1,9", "−0,2* / 1,68", "3,02", "Competencia por recursos"],
     ["Inflación fin de periodo (%)", "3,2", "2,0", "1,5", "5,25 (oct) / 3,85", "2,0 / 2,53", "↑ Costos en soles"],
-    ["Tasa de referencia (%)", "6,75", "5,00", "4,25", "4,25 (nov)", "n. d.", "Costo de proveedores"],
+    ["Tasa de referencia (%)", "6,75", "5,00", "4,25", "4,50 (13-nov)", "n. d.", "Costo de proveedores"],
     ["Tipo de cambio promedio (S/ por US$)", "3,744", "3,754", "3,568", "3,403", "3,35 (MEF)", "↓ E: ↑ costos en US$"],
 ], [3.6, 1.3, 1.3, 1.3, 2.4, 2.0, 3.2])
-SRC("BCRPData (PN01652XM, índice de minería metálica, IPC de Lima, PD04722MM y PN01234PM); BCRP, RI setiembre 2026 (cobre 2027: 6,38); MEF, MMM 2027-2030, cuadros C-01 y C-02 (cobre 2027: 5,70). * Enero-agosto. Tipo de cambio 2026: promedio enero-octubre.")
+SRC("BCRPData (PN01652XM, índice de minería metálica, IPC de Lima, PD04722MM y PN01234PM); BCRP, RI setiembre 2026 (cobre 2027: 6,38); MEF, MMM 2027-2030, cuadros C-01 y C-02 (cobre 2027: 5,70). * enero-agosto. Tipo de cambio 2026: promedio enero-octubre.")
 INT("La tabla 4 muestra que 2026 combina el precio del cobre más alto de la serie con la inflación más alta desde 2023 y un sol fuerte: la variable que más ayuda a OCP coexiste con las dos que más le restan.")
 CAP("Tabla 3. Estados Financieros Estimados de OCP, 2023–2026P (US$ millones)")
 APA(["Partida (estimado por el grupo)", "2023", "2024", "2025", "2026P", "Var. 25/24"], [
@@ -396,7 +396,7 @@ SUB("Variable 1. PBI Mundial, Minería Metálica y Precio del Cobre: el precio d
 T("Las ventas de OCP no responden al PBI peruano sino al precio del cobre. Entre 2024 y 2025 el volumen creció 11,9% y el precio 8,7%, y las ventas estimadas 31,3%; entre 2025 y 2026P el volumen cae 4,5% y el precio sube 36,1%, y las ventas suben 41,1%. Frente al precio del cobre, la elasticidad de las ventas es 0,86 (el cobre aporta 84% del ingreso bruto) y la del EBITDA 1,55, porque el costo por tonelada no cambia con el precio. Con el volumen proyectado (+5% anual por el aumento del ritmo de planta, supuesto del grupo), se proyectan tres escenarios de precio: alto (US$7,00 y US$6,80, por encima del BCRP), base (US$5,70 y US$5,60, MMM 2027-2030) y bajo (US$4,50 y US$4,30, vuelta al nivel de 2025 si China crece cerca de 4%).")
 FORM("Elasticidad = % de cambio de las ventas / % de cambio del precio del cobre (o del PBI minero)",
      "la elasticidad mide cuántos puntos porcentuales cambian las ventas por cada 1% que cambia la variable macro; si es mayor que 1, la empresa amplifica el ciclo.",
-     "precio del cobre 2027P de US$5,70 a US$6,27 (+10%): ventas de US$233,4 a 253,5 millones (+8,6%) → ε = 8,6% / 10% = 0,86; EBITDA +15,5% → ε = 1,55. Frente al PBI minero: en 2025 las ventas estimadas crecieron 31,3% con un PBI de minería metálica de 1,9% → 31,3 / 1,9 = 16,5, una cifra que no mide causalidad sino que el precio y el arranque de la mina dominan.",
+     "precio del cobre 2027P de US$5,70 a US$6,27 (+10%): ventas de US$233,4 a 253,5 millones (+8,6%) → ε = 8,6% / 10% = 0,86; EBITDA +15,5% → ε = 1,55. Frente al PBI minero: en 2025 las ventas estimadas crecieron 31,3% con un PBI de minería metálica de 1,9% → 31,3 / 1,9 = 16,5, una cifra que no mide causalidad, sino que el precio y el arranque de la mina dominan.",
      "las ventas de OCP siguen al cobre casi uno a uno y su EBITDA lo amplifica; frente al PBI minero peruano la relación es débil, por lo que la proyección se hace con el precio y no con el PBI.")
 CAP("Tabla 6. Proyección de Ventas de OCP según el Precio del Cobre, 2026P–2028P (US$ millones)")
 APA(["Escenario (probabilidad)", "Cobre 2027 / 2028 (US$/lb)", "2025", "2026P", "2027P", "2028P"], [
@@ -448,21 +448,21 @@ SRC(EST + ". Precio de equilibrio: cobre con el que la utilidad operativa es cer
 INT("La figura 4 muestra que el tipo de cambio desplaza la curva de EBITDA en unos pocos millones, mientras el cobre la recorre de US$40 a US$175 millones. Para OCP, el tipo de cambio es un riesgo de segundo orden; el precio de equilibrio de US$2,83 por libra muestra que la mina resiste una caída de 50% del cobre antes de perder dinero.")
 
 SUB("Variable 4. Tasa de Referencia BCRP y tasa internacional: costo del financiamiento")
-T("La tasa de referencia bajó de 7,50% en diciembre de 2022 a 4,25% en 2025, pero OCP no se benefició: no tiene deuda bancaria pública conocida. El grupo estima que financió el arranque y el capex de 2023-2024 (US$75 millones) con aportes de capital (US$30 millones), préstamos de vinculadas y prepagos de compradores, con una deuda que llegó a US$51,3 millones en 2024 y gastos financieros de US$4,1 millones en 2025, a una tasa supuesta de 8% (SOFR más un margen). En setiembre de 2024 la junta redujo el capital en S/22,6 millones (US$6,0 millones), una devolución a los accionistas que solo tiene sentido si la caja operativa ya cubría el capex. Con el flujo libre de 2026P (US$50,9 millones), la deuda estimada se cancela.")
+T("La tasa de referencia bajó de 7,50% en diciembre de 2022 a 4,25% en 2025 y volvió a subir a 4,50% el 13 de noviembre de 2026, pero OCP no se benefició de la baja ni la sufre ahora: no tiene deuda bancaria pública conocida. El grupo estima que financió el arranque y el capex de 2023-2024 (US$75 millones) con aportes de capital (US$30 millones), préstamos de vinculadas y prepagos de compradores, con una deuda que llegó a US$51,3 millones en 2024 y gastos financieros de US$4,1 millones en 2025, a una tasa supuesta de 8% (SOFR más un margen). En setiembre de 2024 la junta redujo el capital en S/22,6 millones (US$6,0 millones), una devolución a los accionistas que solo tiene sentido si la caja operativa ya cubría el capex. Con el flujo libre de 2026P (US$50,9 millones), la deuda estimada se cancela.")
 CAP("Tabla 9. Tasa de Referencia y Estructura Financiera Estimada de OCP, 2023–2026P (US$ millones)")
 APA(["Indicador", "2023", "2024", "2025", "2026P"], [
-    ["Tasa de referencia BCRP, diciembre (%)", "6,75", "5,00", "4,25", "4,25"],
+    ["Tasa de referencia BCRP, diciembre (%)", "6,75", "5,00", "4,25", "4,50*"],
     ["Fed, punto medio, diciembre (%)", "5,375", "4,375", "3,625", "3,875"],
     ["Deuda con vinculadas / prepagos (estimada)", "20,9", "51,3", "45,6", "0,0"],
     ["Gastos financieros (8%)", "0,0", "1,7", "4,1", "3,7"],
     ["Flujo de caja libre (operación − capex)", "−23,9", "−24,4", "5,7", "50,9"],
     ["Capital social (neto de la reducción)", "30,0", "24,0", "24,0", "24,0"],
 ], [7.0, 2.2, 2.2, 2.2, 2.2])
-SRC("BCRPData, PD04722MM; Federal Reserve (2026); El Peruano (2024); " + EST + ".")
+SRC("BCRPData, PD04722MM y PD12301MD; Gestión (2026); Federal Reserve (2026); El Peruano (2024); " + EST + ". * Tasa vigente desde el 13 de noviembre de 2026.")
 CAP("Figura 4. Deuda Estimada y Gastos Financieros de OCP, 2023–2026P")
 IMGW("f4.png")
 SRC(EST + ".")
-INT("La figura 5 muestra que el ciclo de deuda de OCP fue de arranque y que el precio del cobre lo cerró en 2026. La sensibilidad a la tasa es baja (US$0,11 millones por 25 pb sobre la deuda de 2025), pero la tasa vuelve a importar si la ampliación a 12.000 t/d se financia con deuda en 2027-2028.")
+INT("La figura 5 muestra que el ciclo de deuda de OCP fue de arranque y que el precio del cobre lo cerró en 2026. La sensibilidad a la tasa es baja (el alza de 25 pb de noviembre equivaldría a US$0,11 millones al año si se trasladara a la deuda de 2025, que está en dólares), pero la tasa vuelve a importar si la ampliación a 12.000 t/d se financia con deuda en 2027-2028.")
 
 H2("En base al análisis de la sección anterior, analizar el impacto del entorno macroeconómico sobre la empresa en cuestión, considerando la situación actual y los próximos tres años."); MARK("s2imp")
 
@@ -483,20 +483,20 @@ CADENA("Cadena 15. Tasa de la Fed (i*) → Costo de Financiar las CxC → Caja d
        "Federal Reserve (2026); " + EST + ".")
 
 SUB("3. Tasa de interés: efecto sobre cuentas por pagar y gastos financieros")
-T("El grupo estima una deuda de US$45,6 millones a fin de 2025, con gastos financieros de US$4,1 millones. El grupo supone que la deuda con vinculadas es de largo plazo y que los prepagos de traders son de corto plazo, porque se cancelan con entregas de concentrado en uno o dos años. Un alza de 25 pb costaría US$0,11 millones al año y una de 100 pb, US$0,46 millones: el riesgo de tasa es pequeño y desaparece en 2026P, cuando el flujo libre cancela la deuda. Las cuentas por pagar comerciales (US$12,3 millones, 45 días) son financiamiento sin costo de proveedores locales, que valen US$1,0 millones al año al 8%; si el BCRP sube la tasa, esos proveedores intentarán acortar plazos. El punto crítico es la ampliación: si los US$93,3 millones de la MEIA se financiaran con deuda a 8%, el gasto financiero sería de unos US$7,5 millones al año.")
+T("El grupo estima una deuda de US$45,6 millones a fin de 2025, con gastos financieros de US$4,1 millones. El grupo supone que la deuda con vinculadas es de largo plazo y que los prepagos de traders son de corto plazo, porque se cancelan con entregas de concentrado en uno o dos años. El alza de 25 pb del BCRP ya ocurrió y no toca directamente esa deuda en dólares; si se trasladara, costaría US$0,11 millones al año, y alzas acumuladas de 100 pb, US$0,46 millones: el riesgo de tasa es pequeño y desaparece en 2026P, cuando el flujo libre cancela la deuda. Las cuentas por pagar comerciales (US$12,3 millones, 45 días) son financiamiento sin costo de proveedores locales, que valen US$1,0 millones al año al 8%; si el BCRP sube la tasa, esos proveedores intentarán acortar plazos. Si la ampliación (US$93,3 millones) se financiara con deuda a 8%, costaría US$7,5 millones al año.")
 AC("la tasa de interés importa menos para la operación actual que para la decisión de ampliar; con el cobre alto, financiar la ampliación con caja propia evita depender de la Fed.")
 CAP("Tabla 11. Sensibilidad de los Gastos Financieros de OCP a la Tasa, 2025–2028P (US$ millones)")
 APA(["Escenario de tasa", "2025", "2026P", "2027P", "2028P"], [
     ["Base: gastos financieros estimados", "4,1", "3,7", "0,0", "0,0"],
-    ["Alza de 25 pb sobre US$45,6 MM", "+0,11", "+0,11", "0,0", "0,0"],
-    ["Alza de 100 pb sobre US$45,6 MM", "+0,46", "+0,46", "0,0", "0,0"],
+    ["Alza de 25 pb ya ocurrida (13-nov), si se trasladara a US$45,6 MM", "+0,11", "+0,11", "0,0", "0,0"],
+    ["Alzas acumuladas de 100 pb sobre US$45,6 MM", "+0,46", "+0,46", "0,0", "0,0"],
     ["Ampliación financiada con deuda (US$93,3 MM al 8%)", "—", "—", "7,5", "7,5"],
     ["Valor de las CxP sin costo al 8% (US$12,3 MM)", "1,0", "1,0", "1,1", "1,2"],
 ], [7.6, 2.0, 2.0, 2.0, 2.0])
 SRC(EST + "; Energiminas (2023), MEIA-d de US$93,3 MM.")
 CADENA("Cadena 16. Tasa de Interés (i) → Gastos Financieros y CxP de OCP",
-       [("↑P", "π 5,25%"), ("↓r", "Ex post −1,00%"), ("↑i", "+25 pb (escenario)"), ("↑Gastos financieros", "+US$0,11 MM"), ("↓Plazo de proveedores", "CxP 45 días"), ("↑Costo de ampliar", "US$7,5 MM/año con deuda")],
-       "Si la inflación lleva a subir la tasa → sube levemente el gasto financiero y los proveedores acortan plazos → el mayor costo aparece si OCP financia la ampliación con deuda.",
+       [("↑P", "π 5,25%"), ("↓r", "Ex post −0,75%"), ("↑i", "+25 pb (13-nov)"), ("↑Gastos financieros", "+US$0,11 MM"), ("↓Plazo de proveedores", "CxP 45 días"), ("↑Costo de ampliar", "US$7,5 MM/año con deuda")],
+       "Como la inflación llevó al BCRP a subir la tasa → sube levemente el gasto financiero y los proveedores acortan plazos → el mayor costo aparece si OCP financia la ampliación con deuda.",
        "BCRPData; " + EST + ".")
 
 SUB("4. Inflación y su repercusión sobre los costos operativos")
@@ -573,7 +573,7 @@ T("Variable y hallazgo: demanda de los clientes y margen de las fundiciones chin
 P("Recomendación R3. Indexar los costos locales a la inflación esperada y mantener la caja en dólares.", bold=True)
 T("Variable y hallazgo: inflación y tipo de cambio; la inflación llegó a 5,25% con expectativas de 3,05% (Sección 1, Perú, subtema 2) y el sol fuerte resta margen a una empresa que vende en dólares (Sección 2, Variable 3). Mientras la inflación observada supere a la esperada en más de 1 pp, OCP debería atar los reajustes de sus contratistas a la expectativa del BCRP y convertir a soles solo lo del trimestre. Meta: un costo por tonelada que no supere US$57 en 2027.")
 P("Recomendación R4. Financiar la ampliación con el flujo libre y no con deuda.", bold=True)
-T("Variable y hallazgo: tasas de la Fed y liquidez; la Fed subió a 3,75%–4,00% y el diferencial con el BCRP es 0,375 pp (Sección 1, subtema 4), mientras el flujo libre de OCP sería US$50,9 millones en 2026P (Sección 2, canal 9). Mientras el cobre supere US$5,00, OCP debería reservar el flujo libre de 2026-2027 para la ampliación a 12.000 t/d sin nuevas reducciones de capital. Meta: ejecutar la MEIA de US$93,3 millones con una deuda/EBITDA menor a 0,5 veces.")
+T("Variable y hallazgo: tasas de la Fed y liquidez; la Fed subió a 3,75%–4,00% y el diferencial con el BCRP subió a 0,625 pp tras el alza de noviembre (Sección 1, subtema 4), mientras el flujo libre de OCP sería US$50,9 millones en 2026P (Sección 2, canal 9). Mientras el cobre supere US$5,00, OCP debería reservar el flujo libre de 2026-2027 para la ampliación a 12.000 t/d sin nuevas reducciones de capital. Meta: ejecutar la MEIA de US$93,3 millones con una deuda/EBITDA menor a 0,5 veces.")
 CAP("Tabla 14. Análisis Costo-Beneficio de las Recomendaciones (US$ millones, horizonte 2026–2027)")
 APA(["Recomendación", "Costo estimado", "Beneficio estimado", "B/C"], [
     ["R1. Fijar precio de 6.000 t de 2027", "4,8 (prima o descuento de 3% sobre US$77 MM, más el costo esperado de renunciar al alza ponderado)", "19,1 en el escenario bajo × 25% de probabilidad = 4,8 esperado; más reducción de la volatilidad del EBITDA de 2027 en 19%", "1,0–2,0"],
@@ -588,7 +588,7 @@ SUB("2. Sugerencias Operativas con Base Macroeconómica")
 T("S1. SI: el cobre LME cae por debajo de US$5,50 por libra durante dos meses seguidos o el crecimiento de China se proyecta bajo 4%: ejecutar las coberturas pendientes de R1, postergar el capex no comprometido de la ampliación y priorizar el mineral de mayor ley.")
 T("S2. SI: el cargo de tratamiento de 2027 supera US$20 por tonelada: activar el contrato de R2 y licitar cada embarque entre Glencore, Mercuria, Trafigura e IXM.")
 T("S3. SI: el tipo de cambio supera S/3,60 por dólar: adelantar la compra de soles para la planilla y los contratos de los próximos dos trimestres; si cae por debajo de S/3,35, convertir solo la necesidad mensual.")
-T("S4. SI: la inflación de Lima supera 5,5% o el BCRP sube su tasa a 4,50%: renegociar los contratos de diésel, explosivos y transporte con tope de reajuste y revisar el plazo de pago a proveedores para no perder el financiamiento de 45 días.")
+T("S4. SI (ACTIVADA desde el 13 de noviembre): el BCRP subió su tasa a 4,50% con la inflación de Lima en 5,25%; si supera 5,5% o hay nuevas alzas el 10 de diciembre, profundizar la medida. Acción: renegociar los contratos de diésel, explosivos y transporte con tope de reajuste y revisar el plazo de pago a proveedores para no perder el financiamiento de 45 días.")
 SUB("3. Comentarios Finales sobre el Entorno Macroeconómico 2026–2027")
 T("C1. El entorno 2026-2028 es favorable para OCP en precio y desfavorable en costos: el cobre (US$6,14) y la plata (US$71,6) llevaron el margen EBITDA estimado a 55%, pero la inflación de 5,25%, el sol fuerte y las expectativas laborales suben un costo por tonelada que no bajará cuando el ciclo cambie.")
 T("C2. El riesgo macroeconómico central es China y no el Perú: el PBI minero peruano puede caer mientras OCP gana, y viceversa. Una desaceleración china a 4% llevaría el cobre hacia US$4,50, el EBITDA de 2027 a US$64 millones y elevaría los cargos de tratamiento que hoy son cero.")
@@ -606,26 +606,27 @@ T("El grupo definió la estructura, los supuestos de la estimación de los estad
 
 H1("Referencias")
 for ref in [
-    "Andina. (2022, 26 de julio). Grupo Dyer adquiere la mina Cobriza por un valor de US$ 19,7 millones. https://andina.pe/agencia/noticia-grupo-dyer-adquiere-mina-cobriza-un-valor-197-millones-903195.aspx",
+    "Andina. (2022, 26 de julio). Grupo Dyer adquiere la mina Cobriza por un valor de US$ 19,7 millones. andina.pe",
     "Banco Central de Reserva del Perú. (2025). Huancavelica: Síntesis de actividad económica, julio 2025. Sucursal Huancayo. https://www.bcrp.gob.pe/docs/Sucursales/Huancayo/2025/presentacion-huancavelica-07-2025.pdf",
     "Banco Central de Reserva del Perú. (2026a). Reporte de Inflación, setiembre de 2026. https://www.bcrp.gob.pe/publicaciones/reporte-de-inflacion.html",
     "Banco Central de Reserva del Perú. (2026b). BCRPData: Series estadísticas [Base de datos]. Consultado el 13 de noviembre de 2026. https://estadisticas.bcrp.gob.pe",
     "El Peruano. (2024, noviembre). Aviso de reducción de capital de Operadores Concentrados Peruanos S.A.C. (junta general del 24 de setiembre de 2024). Boletín Oficial del Diario Oficial El Peruano.",
-    "Energiminas. (2023, 27 de diciembre). Mina Cobriza: Grupo Dyer Coriat planea destinar US$ 93,3 millones para plan de minado y optimización. https://energiminas.com/2023/12/27/mina-cobriza-grupo-dyer-coriat-planea-destinarus-93-3-millones-para-plan-de-minado-y-optimizacion",
-    "Fastmarkets. (2026). Mercuria, Glencore secure future copper concentrate supply with at least $450 mln in offtake deals. https://www.fastmarkets.com/insights/mercuria-glencore-copper-offtake-deals/",
+    "Energiminas. (2023, 27 de diciembre). Mina Cobriza: Grupo Dyer Coriat planea destinar US$ 93,3 millones para plan de minado y optimización. energiminas.com",
+    "Fastmarkets. (2026). Mercuria, Glencore secure future copper concentrate supply with at least $450 mln in offtake deals. fastmarkets.com",
     "Federal Reserve. (2026). Open market operations: Policy rate changes. federalreserve.gov",
+    "Gestión. (2026, 13 de noviembre). BCRP rompe pausa y sube su tasa de referencia. gestion.pe",
     "Glencore Perú. (2026). Perubar: Unidad logística. glencoreperu.pe",
-    "Mining.com. (2025, 30 de diciembre). Mercuria signs copper concentrate offtake agreement with Bulgarian miner. https://www.mining.com/web/mercuria-signs-copper-concentrate-offtake-agreement-with-bulgarian-miner/",
+    "Mining.com. (2025, 30 de diciembre). Mercuria signs copper concentrate offtake agreement with Bulgarian miner. mining.com",
     "Ministerio de Economía y Finanzas. (2026). Marco Macroeconómico Multianual 2027-2030 y cuadros estadísticos. Lima: MEF.",
     "SINIA/MINAM. (s. f.). Informe final de la Segunda Modificación del Plan de Cierre de Mina de la UM Cobriza. https://sinia.minam.gob.pe/sites/default/files/siar-huancavelica/archivos/public/docs/informe_final_de_la_smpcm_-_um_cobriza2.pdf",
-    "Datos Perú. (2026). Operadores Concentrados Peruanos S.A.C.: trabajadores por mes. https://www.datosperu.org/empresa-operadores-concentrados-peruanos-sac-20608321731.php",
+    "Datos Perú. (2026). Operadores Concentrados Peruanos S.A.C.: trabajadores por mes. datosperu.org",
     "Ministerio de Energía y Minas. (2026). Producción minera: producción minera metálica por titular y unidad, 2023, 2024, 2025 y enero-agosto 2026 [Conjunto de datos]. https://www.gob.pe/institucion/minem/informes-publicaciones/5472883-produccion-minera",
-    "Nexa Resources. (2026). 2025 production, sales and costs guidance and 2026-2028 outlook. https://www.newsfilecorp.com/release/282981",
+    "Nexa Resources. (2026). 2025 production, sales and costs guidance and 2026-2028 outlook. newsfilecorp.com",
     "OEFA. (2025a). Resolución Directoral N.° 0155-2025-OEFA/DFAI. https://cdn.www.gob.pe/uploads/document/file/8226264/6871962-resolucion-n-0155-2025-oefa-dfai.pdf",
     "OEFA. (2025b). Resolución Directoral N.° 01807-2025-OEFA/DFAI. https://cdn.www.gob.pe/uploads/document/file/9465822/7750663-resolucion-n-1807-2025-oefa-dfai.pdf",
     "Proactivo. (2022). Grupo Dyer Coriat toma control de mina Cobriza y recontratará a más de 600 trabajadores. proactivo.com.pe",
     "Proactivo. (2025). Senace aprueba octavo ITS de Cobriza con inversión de US$ 8,25 millones. proactivo.com.pe",
-    "Skillings. (2026). Copper price forecast 2026: Smelter treatment charges fall below $20. https://www.skillings.net/copper-price-forecast-2026-smelter-treatment-charges-fall-below-20/",
+    "Skillings. (2026). Copper price forecast 2026: Smelter treatment charges fall below $20. skillings.net",
     "SUNAT. (2024). Resolución N.° 000009-2024/SUNAT, anexo 1: Principales Contribuyentes Nacionales. https://www.sunat.gob.pe/legislacion/superin/2024/anexo1-000009-2024.pdf",
     "Veritrade. (2026). Perú – Importaciones: importador Operadores Concentrados Peruanos S.A.C., enero 2019 – noviembre 2026 [Base de datos con información de SUNAT].",
     "Volcan Compañía Minera. (2026). Análisis y discusión de la gerencia, 4T25 a 3T26. Latibex.",

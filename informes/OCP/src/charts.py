@@ -53,7 +53,7 @@ ax.set_ylim(0,2400); ax2.set_ylim(0,110); dual_legend(ax,ax2,fontsize=9,loc="upp
 
 # g4 tasas Fed vs BCRP
 br=[p for p in json.load(open(os.path.join(S,"bcrp","H_PD04722MM.json")))["periods"] if p["name"][-4:] in ("2024","2025","2026") and p["values"][0]!="n.d."]
-br=[(p["name"],float(p["values"][0])) for p in br]
+br=[(p["name"],float(p["values"][0])) for p in br]+[("Nov.2026",4.50)]
 steps={"Ene.2024":5.375,"Sep.2024":4.875,"Nov.2024":4.625,"Dic.2024":4.375,"Sep.2025":4.125,"Oct.2025":3.875,"Dic.2025":3.625,"Sep.2026":3.875}
 fv=[];cur=5.375
 for n,_ in br:
@@ -63,7 +63,7 @@ fig,ax=plt.subplots(figsize=(7.5,3.4)); xs=list(range(len(br)))
 ax.step(xs,[v for _,v in br],where="post",color=AZ,lw=2,label="Tasa de referencia BCRP")
 ax.step(xs,fv,where="post",color=RO,lw=2,label="Fed, punto medio del rango")
 ax.fill_between(xs,fv,[v for _,v in br],step="post",color=NA,alpha=0.15,label="Diferencial")
-ax.annotate("0,375 pp",(xs[-1],4.06),xytext=(-40,18),textcoords="offset points",fontsize=9,color=NA)
+ax.annotate("0,625 pp\n(alza a 4,50%, 13-nov)",(xs[-1],4.2),xytext=(-95,22),textcoords="offset points",fontsize=9,color=NA)
 ax.set_xticks(xs[::3]); ax.set_xticklabels([lab(n) for n,_ in br][::3],rotation=45); ax.set_ylabel("%"); ax.set_ylim(3,7)
 ax.legend(frameon=False,fontsize=9,loc="upper right"); save(fig,"g4.png")
 
@@ -221,8 +221,8 @@ save(fig,"m4.png")
 fig,ax=model_axes("Producto real (Y)","Tasa de interés real (r)")
 ax.plot(q,9.2-0.85*q,color=CEL,lw=2.5); ax.text(0.7,8.8,"IS₀",color=CEL,fontweight="bold")
 ax.plot(q,9.9-0.85*q,color=CEL,lw=2.5,ls="--"); ax.text(1.4,9.1,"IS₁ (inversión minera y crédito +10,3%)",color=CEL,fontweight="bold")
-ax.axhline(4.2,color=AZ,lw=2.5); ax.text(8.0,3.7,"MP₀: r = 1,20%",color=AZ,fontweight="bold")
-ax.axhline(5.0,color=RO,lw=2.5,ls="--"); ax.text(7.3,5.2,"MP₁: alza de 25 pb",color=RO,fontweight="bold")
+ax.axhline(4.2,color=AZ,lw=2.5); ax.text(7.2,3.7,"MP₀: r = 1,20% (oct-26)",color=AZ,fontweight="bold")
+ax.axhline(5.0,color=RO,lw=2.5,ls="--"); ax.text(5.6,5.2,"MP₁: r = 1,45% (alza a 4,50%, 13-nov)",color=RO,fontweight="bold")
 eq(ax,6.7,4.2,"E₁",AZ,dx=6,dy=-18); eq(ax,5.76,5.0,"E₂",RO,dx=-24,dy=6)
 arrow(ax,(7.2,4.4),(6.3,4.9)); save(fig,"m5.png")
 
@@ -243,7 +243,7 @@ def ishikawa(name,efecto,espinas):
 ishikawa("i1.png","Ventas y costos\nde OCP Cobriza\n2026-2027",[
  ("China y Y*",["Mundo 3,1% (2026)","China 4,5% → 4,2%","Demanda de cobre por IA"],VE),
  ("Cobre y plata",["Cu US$6,14/lb (+36%)","Ag US$71,6/oz (+79%)","TC/RC = US$0"],VE),
- ("Fed y dólar",["Fed 3,75%–4,00%","i − i* = 0,375 pp","TC S/3,412"],RO),
+ ("Fed y dólar",["Fed 3,75%–4,00%","i − i* = 0,625 pp","TC S/3,412"],RO),
  ("Petróleo",["WTI US$98,9 (oct-26)","Diésel y fletes al Callao","Explosivos y energía"],RO),
  ("π EE.UU. y Europa",["PCE EE.UU. 3,7%","Capex importado US$7,3 MM","Italia y Alemania 77%"],RO),
  ("Traders",["Glencore (Perubar)","Mercuria","Prepagos y términos"],GR)])
@@ -251,7 +251,7 @@ ishikawa("i2.png","Producción, costos\ny caja de OCP\n2026-2028",[
  ("PBI minero",["Minería metálica −0,2% (2026)","MMM: +3,0% (2027)","OCP 0,6% del Cu nacional"],VE),
  ("Inflación",["π Lima 5,25%","Insumos locales","Planilla de 437-461 (2025)"],RO),
  ("Tipo de cambio",["Ventas en US$","~55% del costo en soles","S/3,40–3,50"],VE),
- ("Tasa y Fisher",["Referencia 4,25%","r ex ante 1,20%","r ex post −1,00%"],GR),
+ ("Tasa y Fisher",["Referencia 4,50% (13-nov)","r ex ante 1,45%","r ex post −0,75%"],GR),
  ("TI y BP",["TI +18,1%","CA +4,0% del PBI","RIN US$96.668 MM"],VE),
  ("Fisco y regulación",["Regalía + IEM","OEFA: 34,2 UIT","MEIA US$93,3 MM"],RO)])
 ishikawa("i5.png","Ventas de OCP\n(US$ MM)",[
@@ -272,11 +272,11 @@ ishikawa("i7.png","Exposición\ncambiaria de OCP",[
  ("Ventas",["100% en US$","Precio LME","Pagos del trader"],VE),
  ("Costos",["~55% en soles","Planilla y servicios","Insumos locales"],RO),
  ("Capex importado",["US$7,3 MM CIF","Italia 4,4; Alemania 1,2","Euro y dólar"],RO),
- ("Fed",["3,75%–4,00%","Diferencial 0,375 pp","Flujo de capitales"],GR),
+ ("Fed",["3,75%–4,00%","Diferencial 0,625 pp","Flujo de capitales"],GR),
  ("BCRP",["Compras US$15.715 MM","RIN US$96.668 MM","TC S/3,412"],VE),
  ("Impuestos",["Regalía en US$","IR en soles","Diferencia de cambio"],GR)])
 ishikawa("i8.png","Costo financiero\nde OCP",[
- ("BCRP",["Referencia 4,25%","r ex post −1,00%","Sesgo al alza"],GR),
+ ("BCRP",["Referencia 4,50% (13-nov)","r ex post −0,75%","Más alzas posibles"],GR),
  ("Fed y SOFR",["3,75%–4,00%","Prepagos en US$","Préstamos vinculados"],RO),
  ("Deuda estimada",["US$45,6 MM (2025)","0 en 2026P","Tasa 8% (supuesto)"],AZ),
  ("Capex",["US$150 MM (2023-26)","MEIA US$93,3 MM","ITS US$8,25 MM"],AZ),

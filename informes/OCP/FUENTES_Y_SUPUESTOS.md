@@ -140,3 +140,18 @@ La cifra de «US$90 MM anuales» difundida por la prensa en 2022 era una **proye
 **Empleo.** 604 trabajadores recontratados en 2022 (prensa); 437-461 trabajadores mensuales en planilla en ene-nov 2025 (datosperu.org), cifra que puede excluir contratistas.
 
 **MEF.** No se publican la regalía ni el IEM individuales de Cobriza; en el informe se presentan como estimados.
+
+## 6. Actualización de la tasa de referencia (V3)
+
+- El BCRP subió la tasa de referencia de 4,25% a 4,50% (+25 pb), vigente desde el 13-nov-2026. Es la primera alza tras 14 meses de pausa. Motivos: inflación de 5,25% en octubre y choques de oferta en alimentos y energía.
+- Tasas de ventanilla: depósitos overnight 2,25%; reportes y créditos de regulación monetaria 4,75%. Próxima reunión: 10-dic-2026.
+- Fuentes: Gestión (13-nov-2026), RPP y Nota Informativa del Programa Monetario. BCRPData (PD12301MD) registra 4,25% hasta el 12-nov.
+- Recálculos:
+
+  | Concepto | Cálculo | Lectura |
+  |---|---|---|
+  | Fisher | r ex ante = 4,50 − 3,05 = 1,45%; ex post = 4,50 − 5,25 = −0,75% | Tasa real todavía negativa ex post |
+  | Paridad de tasas | 4,50 − 3,875 = 0,625 pp | Mayor premio por invertir en soles |
+  | Taylor | 8,6% / 5,3% frente a 4,50% | El BCRP empezó a subir y la regla sugiere más alzas (~80 pb con inflación esperada) |
+
+- La deuda estimada de OCP está en dólares, así que el alza no la afecta directamente (+US$0,11 MM al año si se trasladara).
