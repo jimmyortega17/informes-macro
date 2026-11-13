@@ -9,7 +9,7 @@ pat=re.compile(r'CADENA\("([^"]+)",\s*\n\s*(\[.*?\]),\s*\n\s*"([^"]*)"',re.S)
 chains=[]
 for m in pat.finditer(src):
     pos=m.start(); sec="s1int" if pos<cuts["s1peru"] else "s1peru" if pos<cuts["s2desc"] else "s2imp"
-    chains.append((sec,m.group(1),ast.literal_eval(m.group(2)),m.group(3)))
+    t=re.sub(r"^Cadena \d*\.?\s*","",m.group(1)); chains.append((sec,f"Cadena {len(chains)+1}. "+t,ast.literal_eval(m.group(2)),m.group(3)))
 wb=Workbook(); ws=wb.active; ws.title="Cadenas de Razonamiento"
 for i,col in enumerate("ABCDEFGHIJK"): ws.column_dimensions[col].width=22 if i%2==0 else 3
 ws["A1"]="OPERADORES CONCENTRADOS PERUANOS S.A.C. (MINA COBRIZA) — CADENAS DE RAZONAMIENTO MACROECONÓMICO 2026-2028"; ws["A1"].font=Font(name="Calibri",bold=True,size=13)
