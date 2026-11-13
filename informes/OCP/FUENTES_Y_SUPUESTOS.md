@@ -27,11 +27,32 @@
 | Precios 2027-28 | Cu 570 y 560 ¢/lb (MMM 2027-2030, C-01) | MEF |
 
 ### Lo que NO se pudo obtener
-- **SUNAT/Aduanas, exportaciones e importaciones por RUC:** la consulta por exportador de Aduanet pide código de imagen (captcha) y `datosabiertos.gob.pe` bloqueó el acceso automático (HTTP 418). Falta el FOB 2603/2608 de OCP, los destinos, los consignatarios y las importaciones. **Queda como consulta manual.** Además, si OCP vende en el Callao a Perubar/Glencore Perú o a la filial local de un trader, el **exportador de registro es el trader** y el FOB por el RUC de OCP saldría bajo o vacío. Un indicio: Exportemos registra solo US$31 MM de la partida 2603 desde Huancavelica en 2024.
+- **SUNAT/Aduanas:** la consulta directa por RUC en Aduanet pide captcha. Se reemplazó con el registro **Veritrade** (base SUNAT) que entregó el usuario (ver §1-bis). Veritrade **no registra exportaciones** con el RUC de OCP.
 - **Reducción de capital de S/22,6 MM (junta del 24/09/2024):** dato del usuario, no verificado en fuentes públicas (está en SUNARP o El Peruano).
 - **Deuda:** no se halló deuda pública, bonos ni prepagos anunciados.
 - **Clientes Perubar y Mercuria:** no se encontró ninguna nota pública que los vincule con OCP (ver §4).
 - **Regalías/IEM por empresa (MEF/SUNAT):** no se publican por contribuyente.
+
+## 1-bis. Importaciones de OCP por partida y año (Veritrade/SUNAT, US$ CIF) — DATO REAL
+
+Fuente: `informes/OCP/insumos/Veritrade_OCP_importaciones_2019-2026.xlsx`, 168 DUA del importador RUC 20608321731 (ene-2019 a nov-2026; no hay registros antes de 2023). El detalle está en la hoja *Importaciones* del Excel.
+
+| Partida | Bien principal | 2024 | 2025 | 2026 (ene-nov) | Total |
+|---|---|---|---|---|---|
+| 8421 | Filtros prensa MATEC (Italia) para agua y relaves | — | 2,10 | 2,30 | 4,41 |
+| 8413 | Bomba ABEL HMQ-400-2000 (Alemania) para bombeo de relleno, más repuestos | — | — | 1,20 | 1,20 |
+| 8474 | Partes de chancado/molienda, zarandas | — | 0,36 | 0,42 | 0,79 |
+| 8429 | Topador de ruedas RHINO RWD235 | — | — | 0,32 | 0,32 |
+| 9027 | Estación de calidad de aire | — | — | 0,25 | 0,25 |
+| Otras | Topografía, informática, sismicidad, válvulas, etc. | 0,14 | 0,06 | 0,09 | 0,30 |
+| **Total (US$ MM)** | | **0,14** | **2,53** | **4,59** | **7,27** (2023: 0,006) |
+
+Origen: Italia 4,40; Alemania 1,19; EE.UU. 0,56; Canadá 0,42; China 0,34 (US$ MM). Los tributos de importación pagados (ad valorem, IGV e IPM) suman unos US$0,16 MM.
+
+**Lectura para los EEFF:**
+1. Las importaciones directas son **capex ambiental y de planta**: agua/relaves, relleno, chancado y calidad de aire. Encajan con el ITS de relaves y agua (US$8,25 MM) y con el escalamiento de la planta. Equivalen a **~6% del capex estimado de 2025 (US$40 MM)** y a **~13% del de 2026P (US$35 MM)**. El resto del capex es desarrollo de mina, obra civil, montaje y equipos comprados localmente a distribuidores (nacionalizados por terceros), así que el supuesto de capex (25/50/40/35) **no se contradice**, aunque la importación directa no lo valida en monto. Se mantiene el supuesto.
+2. Los **insumos operativos** (explosivos, reactivos, combustible, bolas) **no aparecen como importación directa**: se compran localmente en soles o en dólares. En el informe esto alimenta el canal de inflación y costos (inflación local y TC por intermedio de los proveedores) y el canal de TC y Fed (el capex importado está en dólares y en euros).
+3. **Exportaciones:** Veritrade no registra exportaciones con el RUC de OCP. Es evidencia de que el concentrado **se vende localmente a traders** (Perubar/Glencore Perú, Mercuria), que son los exportadores de registro. Se usará en el canal 8 (clientes).
 
 ## 2. Supuestos de la estimación
 
@@ -70,7 +91,7 @@
 
 | Contraparte | Estado de la evidencia |
 |---|---|
-| Perubar S.A. (Glencore, Callao) | Indicado por el usuario. Perubar almacena, mezcla y embarca concentrados de terceros, pero **no hay nota pública que lo vincule con OCP** |
+| Perubar S.A. (Glencore, Callao) | Indicado por el usuario. Veritrade muestra cero exportaciones con el RUC de OCP, lo que es coherente con la venta local a traders. Perubar almacena, mezcla y embarca concentrados de terceros, pero **no hay nota pública que lo vincule con OCP** |
 | Mercuria Energy Group | Indicado por el usuario. **No hay offtake ni prepago público con OCP**. Como referencia, Mercuria colocó ~US$2.000 MM en acuerdos de concentrado en 2025 (Geotechmin, prepago de US$250 MM) |
 | Glencore Perú S.A.C., IXM, Trafigura | Exportadores habituales de la partida 2603 desde el Callao; posibles compradores, sin evidencia específica |
 | China | Destino final probable (benchmark TC/RC de 0 en 2026) |
