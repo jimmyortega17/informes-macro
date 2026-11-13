@@ -28,7 +28,7 @@
 
 ### Lo que NO se pudo obtener
 - **SUNAT/Aduanas:** la consulta directa por RUC en Aduanet pide captcha. Se reemplazó con el registro **Veritrade** (base SUNAT) que entregó el usuario (ver §1-bis). Veritrade **no registra exportaciones** con el RUC de OCP.
-- **Reducción de capital de S/22,6 MM (junta del 24/09/2024):** dato del usuario, no verificado en fuentes públicas (está en SUNARP o El Peruano).
+- **Reducción de capital de S/22.638.000 (junta del 24/09/2024):** fuente indicada por el usuario: aviso en el Boletín Oficial de El Peruano (nov-2024), reproducido en un PDF de Ositran. No se pudo abrir desde este entorno; se cita como «aviso de reducción de capital, El Peruano, nov-2024».
 - **Deuda:** no se halló deuda pública, bonos ni prepagos anunciados.
 - **Clientes Perubar y Mercuria:** no se encontró ninguna nota pública que los vincule con OCP (ver §4).
 - **Regalías/IEM por empresa (MEF/SUNAT):** no se publican por contribuyente.
