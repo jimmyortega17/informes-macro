@@ -25,12 +25,13 @@ for sec,title,elems,nota in chains:
     for k,(no,ci) in enumerate(elems):
         col=1+2*k; fill=PatternFill("solid",fgColor=F_FIRST if k==0 else F_LAST if k==n-1 else F_MID)
         sym=no[0] if no[0] in "↑↓" else "→"
-        c=ws.cell(r,col,sym); c.font=Font(name="Calibri",bold=True,size=13); c.fill=fill; c.alignment=Alignment(horizontal="center")
+        c=ws.cell(r,col,sym); c.fill=fill; c.alignment=Alignment(horizontal="center")
+        c.font=Font(name="Calibri",bold=True,size=16 if sym in "↑↓" else 14,color={"↑":"FF008000","↓":"FFC00000"}.get(sym,"FF1F3864"))
         txt=(no[1:] if no[0] in "↑↓" else no).strip()+"\n"+ci
-        c=ws.cell(r+1,col,txt); c.font=Font(name="Calibri",size=9); c.fill=fill; c.alignment=Alignment(wrap_text=True,horizontal="center",vertical="center")
+        c=ws.cell(r+1,col,txt); c.font=Font(name="Calibri",size=9,bold=True,color="FF1F3864"); c.fill=fill; c.alignment=Alignment(wrap_text=True,horizontal="center",vertical="center")
         if k<n-1:
-            a=ws.cell(r,col+1,"→"); a.font=Font(name="Calibri",bold=True,size=14); a.alignment=Alignment(horizontal="center")
-    ws.row_dimensions[r+1].height=72
+            a=ws.cell(r,col+1,"→"); a.font=Font(name="Calibri",bold=True,size=14,color="FF1F3864"); a.alignment=Alignment(horizontal="center")
+    ws.row_dimensions[r].height=24; ws.row_dimensions[r+1].height=72
     c=ws.cell(r+2,1,nota); c.font=Font(name="Calibri",size=9,italic=True); c.alignment=Alignment(wrap_text=True,vertical="top")
     ws.merge_cells(start_row=r+2,start_column=1,end_row=r+2,end_column=11); ws.row_dimensions[r+2].height=30
     r+=5

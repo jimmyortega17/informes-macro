@@ -28,12 +28,12 @@ def CADENA(titulo, elems, nota=None, fuente=None):
     _NC[0] += 1; titulo = f"Cadena {_NC[0]}. " + _re.sub(r"^Cadena\s*\d*\.\s*", "", titulo)
     _CADENA(titulo, elems, None)
     p = doc.add_paragraph()
-    if nota: run(p, nota + " ", True)
+    if nota: arrow_runs(p, nota + " ", bold=True)
     run(p, "Fuente: " + (fuente or "BCRP; BCRPData; MINEM; EEFF estimados por el grupo."))
 
-def IMGW(name, w=8.2):
-    if name.startswith("i"): w = 8.8
-    IMG(name, min(w, 8.8) / 2.54)
+def IMGW(name, w=7.6):
+    if name.startswith("i"): w = 8.2
+    IMG(name, min(w, 8.2) / 2.54)
 def AC(text):
     p = doc.add_paragraph(); run(p, "Análisis crítico — ", True); run(p, text)
 def FORM(ecuacion, letras, reemplazo, resultado):
@@ -111,7 +111,7 @@ IMGW("g2.png")
 SRC("BCRPData, series PN01652XM, PN01655XM, PN01657XM y PN01660XM (consulta del 13 de noviembre de 2026).")
 INT("El gráfico 2 muestra que el cobre (índice 162) y la plata (241) se separaron del petróleo (126) y del zinc (117) desde 2025. Para el Perú esa separación es un aumento del ingreso nacional; para OCP es un margen que crece porque sus dos productos suben más que su principal insumo importado, el combustible.")
 CAP("Modelo 1. Mercado Internacional del Cobre: Expansión de la Demanda con Oferta Rígida, 2025–2026")
-IMGW("m1.png", 6.6)
+IMGW("m1.png", 6.0)
 SRC("BCRPData (precio promedio 2025 y enero-octubre 2026); BCRP, RI setiembre 2026. Diagrama conceptual con precios observados.")
 INT("El modelo 1 muestra que la demanda se desplazó de D₀ a D₁ y, con una oferta poco elástica (nuevas minas tardan diez años), el equilibrio pasó de E₀ (US$4,51) a E₁ (US$6,14), +36%. El cargo de tratamiento de US$0 en 2026 (y negativo en el mercado spot, hasta −US$125 por tonelada en junio) indica que el cuello de botella está en la mina y no en la fundición. Para OCP, esa escasez de concentrado vale doble: sube el precio y mejora los términos de venta.")
 CADENA("Cadena 3. Petróleo (Poil) → Inflación (P) → Costos Mineros de OCP",
@@ -139,7 +139,7 @@ CAP("Gráfico 5. Tasa de Referencia del BCRP y Tasa de la Fed, enero 2024 – no
 IMGW("g4.png")
 SRC("BCRPData, series PD04722MM y PD12301MD; Gestión (2026) para el alza del 12 de noviembre (vigente desde el 13); Federal Reserve (2026), punto medio del rango.")
 CAP("Modelo 2. Mercado Cambiario: Oferta y Demanda de Dólares, 2025 – noviembre 2026")
-IMGW("m2.png", 6.6)
+IMGW("m2.png", 6.0)
 SRC("BCRPData; BCRP, RI setiembre 2026. Diagrama conceptual con valores observados.")
 INT("El modelo 2 muestra que las exportaciones mineras desplazan la oferta de dólares de S$₀ a S$₁ y llevan el equilibrio de E₀ (S/3,568, promedio de 2025) a E₁ (S/3,412). La paradoja para OCP es que el mismo cobre caro que eleva sus ventas aprecia el sol y encarece sus costos en soles: parte de su ganancia de precio la devuelve por el tipo de cambio.")
 CADENA("Cadena 5. Tasa de la Fed (i*) → Tipo de Cambio (E) → Costos en Dólares de OCP",
@@ -180,7 +180,7 @@ IMGW("g6.png")
 SRC("BCRPData (PN01728AM y PN01760AM); MEF, MMM 2027-2030, cuadros C-01 y C-02 (2027P-2028P). * 2026: enero-agosto.")
 INT("El gráfico 6 muestra que la minería metálica pasó de liderar el crecimiento en 2023 a restarle en 2026. Para OCP, cuya producción depende de su propia mina y no del ciclo nacional, el PBI minero es un indicador de competencia por equipos, contratistas y permisos, no de demanda: sus ventas no dependen del PBI peruano.")
 CAP("Modelo 3. Oferta Agregada y Demanda Agregada: Perú 2025–2026")
-IMGW("m3.png", 6.6)
+IMGW("m3.png", 6.0)
 SRC("BCRP, RI setiembre 2026; BCRPData. Diagrama conceptual con cifras observadas y proyectadas.")
 INT("El modelo 3 muestra que la demanda agregada se desplazó a la derecha por la inversión y el ingreso minero, y la oferta a la izquierda por el petróleo, El Niño y una minería estancada: el equilibrio pasa de E₀ (π 1,5%; PBI 3,4%) a E₁ (π 5,25%; PBI 3,2%). Para OCP, OA₁ significa costos locales más altos sin más producción.")
 CADENA("Cadena 7. Términos de Intercambio (TI) → Demanda Interna (DA) → Costos Locales de OCP",
@@ -267,7 +267,7 @@ FORM("Regla de Taylor simple: i = r* + π + 0,5 × (π − π*) + 0,5 × (brecha
      "en ambos casos la tasa sugerida supera el 4,50% vigente: el BCRP ya empezó a subir y la regla sugiere más alzas. Con la inflación esperada le faltan unos 80 pb, unas tres alzas de 25 pb, la próxima posible el 10 de diciembre. Para OCP, cada alza encarece a sus proveedores locales y puede apreciar el sol.")
 T("Para el BCRP, una tasa real ex post negativa con inflación fuera del rango meta justificó el alza de 25 pb de noviembre y puede justificar otras. Para OCP, el ciclo de efectivo es corto y está en dólares: el comprador paga cerca de 90% del valor provisional al embarque y liquida el saldo uno a tres meses después, con el precio del periodo de cotización. El grupo estima cuentas por cobrar de 30 días (US$14,5 millones en 2025), inventarios de 30 días de costo y cuentas por pagar de 45 días: el capital de trabajo neto es pequeño y la tasa de interés local casi no lo afecta.")
 CAP("Modelo 4. IS-MP: Inversión Minera, Tasa Real y Producto, 2026")
-IMGW("m5.png", 6.6)
+IMGW("m5.png", 6.0)
 SRC("BCRPData (tasa de referencia y expectativas, octubre de 2026); BCRP, RI setiembre 2026. Diagrama conceptual.")
 INT("El modelo 4 muestra la IS desplazada a la derecha (IS₁) por la inversión minera y el crédito, con la regla monetaria en r = 1,20% hasta octubre (E₁). El alza del 12 de noviembre lleva la MP a MP₁ (r ex ante de 1,45%) y modera el producto en E₂; nuevas alzas el 10 de diciembre la desplazarían otra vez. Para OCP el efecto directo es pequeño: su financiamiento está en dólares y depende de la Fed y de sus compradores, no del BCRP.")
 CADENA("Cadena. Tasa de Interés (i) → Inversión y Consumo → PBI (Y)",
@@ -428,7 +428,7 @@ CAP("Figura 2. Costo por Tonelada de OCP, Referencia de Volcan e Inflación, 202
 IMGW("f2.png")
 SRC(EST + "; Volcan Compañía Minera, Análisis y Discusión de la Gerencia (promedio simple de trimestres; 2026: enero-setiembre); BCRPData.")
 CAP("Modelo 5. Isocuanta Minera: Trabajo y Capital ante la Inflación y la Ampliación")
-IMGW("m4.png", 6.6)
+IMGW("m4.png", 6.0)
 SRC(EST + "; Veritrade/SUNAT (capex importado); BCRPData. Diagrama conceptual.")
 INT("La figura 3 muestra que el costo de OCP sigue la tendencia de su referencia y que el alza de 2026 coincide con el salto de la inflación. El modelo 5 muestra que la inflación salarial vuelve más empinada la recta de isocosto y desplaza el óptimo de A a B: más capital por trabajador, que es la lógica de los filtros prensa, la bomba de relleno y el topador importados en 2025-2026, y de la ampliación a 12.000 t/d (Q₁).")
 

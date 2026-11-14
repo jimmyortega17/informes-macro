@@ -32,7 +32,7 @@ def set_font_style(s, bold=None):
     for a in ("w:asciiTheme", "w:hAnsiTheme", "w:cstheme", "w:eastAsiaTheme"):
         if rf.get(qn(a)) is not None: del rf.attrib[qn(a)]
 set_font_style(doc.styles["Normal"])
-doc.styles["Normal"].paragraph_format.space_after = Pt(4); doc.styles["Normal"].paragraph_format.line_spacing = 1.15
+doc.styles["Normal"].paragraph_format.space_after = Pt(2); doc.styles["Normal"].paragraph_format.line_spacing = 1.15
 for h in ("Heading 1", "Heading 2"):
     st = doc.styles[h]; set_font_style(st, True); st.font.italic = False
     st.paragraph_format.space_before = Pt(12); st.paragraph_format.space_after = Pt(6); st.paragraph_format.keep_with_next = True
@@ -93,20 +93,40 @@ def cell_lines(cell, lines, align=WD_ALIGN_PARAGRAPH.CENTER):
         p.alignment = align; p.paragraph_format.space_after = Pt(0); p.paragraph_format.line_spacing = 1.0
         run(p, txt, b)
 
+VERDE = RGBColor(0x00, 0x80, 0x00); AZUL = RGBColor(0x1F, 0x38, 0x64)
+def arrow_runs(p, text, bold=False, color=None, size=SZ):
+    """Escribe text en p con flechas formateadas: ↑ verde 16, ↓ rojo 16, → azul 14 (todas en negrita)."""
+    import re as _r
+    for part in _r.split(r"([↑↓→])", text):
+        if not part: continue
+        if part == "↑": r = run(p, part, True, color=VERDE); r.font.size = Pt(16)
+        elif part == "↓": r = run(p, part, True, color=ROJO); r.font.size = Pt(16)
+        elif part == "→": r = run(p, part, True, color=AZUL); r.font.size = Pt(14)
+        else:
+            r = run(p, part, bold, color=color); r.font.size = Pt(size)
+
 def CADENA(titulo, elems, nota=None):
     """elems: lista de (notación, cifra). Caja única con flechas, estilo de la guía del profesor."""
     CAP(titulo)
     n = len(elems) * 2 - 1
     t = doc.add_table(rows=1, cols=n); t.alignment = WD_TABLE_ALIGNMENT.CENTER; t.autofit = False
-    aw = Inches(0.17); ew = Emu(int((Inches(6.5) - aw * (len(elems) - 1)) / len(elems)))
+    aw = Inches(0.20); ew = Emu(int((Inches(6.5) - aw * (len(elems) - 1)) / len(elems)))
     widths = []
     for i in range(n):
-        c = t.rows[0].cells[i]
+        c = t.rows[0].cells[i]; c.text = ""
         top = 12; left = 12 if i == 0 else None; right = 12 if i == n - 1 else None
+        p0 = c.paragraphs[0]; p0.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p0.paragraph_format.space_after = Pt(0); p0.paragraph_format.line_spacing = 1.0
         if i % 2 == 0:
-            no, ci = elems[i // 2]; cell_lines(c, [(no, True), (ci, False)]); widths.append(ew)
+            no, ci = elems[i // 2]
+            if no[:1] in "↑↓" and no[1:2] != " ": no = no[0] + " " + no[1:]
+            arrow_runs(p0, no, bold=True, color=AZUL)
+            p1 = c.add_paragraph(); p1.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            p1.paragraph_format.space_after = Pt(0); p1.paragraph_format.line_spacing = 1.0
+            arrow_runs(p1, ci, bold=True)
+            widths.append(ew)
         else:
-            cell_lines(c, [("→", True)]); widths.append(aw)
+            arrow_runs(p0, "→"); widths.append(aw)
         borders(c, top=top, bottom=12, left=left, right=right)
     fix_widths(t, widths)
     mar = OxmlElement("w:tblCellMar")
